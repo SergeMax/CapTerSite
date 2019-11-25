@@ -135,6 +135,30 @@ width: 5vw;
     transition: opacity 0.1s;
 
 }
+
+
+#logo1div{
+
+    width: 40%;
+    left: 0px;
+    min-width: 500px;
+    transition: opacity 0.3s;
+    height: 100%;
+
+}
+
+#logo2div{
+    width: 40%;
+    left: 0px;
+    min-width: 500px;
+    transition: opacity 0.3s;
+    height: 100%;
+}
+
+
+
+
+
 #logo1{
 position: absolute;
     top: 60%;
@@ -255,12 +279,12 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 #imgLogoNav {
     position: absolute;
     top: -10%;
-    right: 5%;
+
     left:-55%;
 
     max-width: auto;
   /*  height: 1000px;*/
-    height: 120vh;
+    height: 1200px;
     opacity: 0;
 
     margin-top: 0;

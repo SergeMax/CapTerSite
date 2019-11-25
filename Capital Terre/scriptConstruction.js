@@ -12,12 +12,17 @@ var panel1 = document.getElementById("panel1");
 var imgBandeOblique = document.getElementById("imgLogoNav");
 var logo1 = document.getElementById("logo1");
 var logo2 = document.getElementById("logo2");
-
-
 var panel2 = document.getElementById("panel2");
 var divIntro = document.getElementById("divIntro");
 var textCapital = document.getElementById("textCapitalsTerre");
 var textTerres = document.getElementById("textTerres");
+var imgPanel1 = document.getElementById("imgPanel1");
+var textTerres = document.getElementById("textTerres");
+var textP1 = document.getElementById("textP1");
+
+
+
+
 
 
 var indice = 0.01;
@@ -48,50 +53,38 @@ $(document).ready(function () {
 
         setTimeout(function () {
             onglet[4].style.opacity = 1;
+            imgPanel1.style.marginLeft = "0";
+            imgPanel1.style.opacity = "1";
+            textP1.style.opacity = "1";
 
 
         }, 400);
 
     setTimeout(function () {
-
         onglet[3].style.opacity = 1;
-
     }, 800);
 
     setTimeout(function () {
         onglet[2].style.opacity = 1;
-
-
     }, 1200);
 
     setTimeout(function () {
-
-
     }, 1600);
     setTimeout(function () {
         onglet[0].style.opacity = 1;
-
-
     }, 1600);
 
 
 
     setTimeout(function () {
         imgPetitLogoNav.style.transition = "opacity 4s";
-
-
-
     }, 500);
 
 
 
     setTimeout(function () {
         divIntro.style.display = "none";
-
         imgPetitLogoNav.style.opacity = 0.7;
-
-
-
     }, 2400);
 
 
@@ -137,6 +130,23 @@ function update_menu() {
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
         navbarSectionText.style.color = "black";
+       /* #imgPanel1{
+            width: 40%;
+            height: auto;
+            margin-right: 10vw;
+            object-fit: cover;
+
+        }
+
+        #imgPanel1Mob{
+            width: 40%;
+            height: auto;
+            margin-right: 10vw;
+            object-fit: cover;
+
+        }*/
+
+
         // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0.4)";
 
        /* for (i = 0; i < onglet.length; i++) {
@@ -160,19 +170,6 @@ function update_menu() {
     }
 }
 
-function load() {
-
-    function scroll_to(contenu) {
-        $('html, body').animate({
-            scrollTop: $(this.contenu).offset().top
-        }, 1000);
-    }
-
-//        scroll_to(document.body);
-
-}
-
-//$(document).ready(load());
 
 window.addEventListener("scroll", update_menu);
 

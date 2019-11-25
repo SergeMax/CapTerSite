@@ -31,10 +31,10 @@
      id="namedview3733"
      showgrid="false"
      inkscape:zoom="0.41640733"
-     inkscape:cx="402.27915"
-     inkscape:cy="1006.8046"
-     inkscape:window-x="459"
-     inkscape:window-y="135"
+     inkscape:cx="-112.87117"
+     inkscape:cy="702.90768"
+     inkscape:window-x="555"
+     inkscape:window-y="222"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg3731" />
   <metadata
@@ -46,6 +46,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
   </cc:Work>
 </rdf:RDF>
 </metadata>
@@ -58,14 +59,4 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
        d="M3429 7327 c-196 -146 -419 -312 -720 -534 -139 -103 -570 -422 -875 -649 -134 -100 -245 -179 -248 -176 -3 2 -31 -14 -62 -38 l-57 -43 6 -186 c4 -102 7 -381 7 -618 l0 -433 275 0 275 0 0 490 c0 379 3 492 13 500 13 12 216 160 257 188 14 9 151 109 305 221 154 113 294 214 310 225 54 38 468 338 580 422 61 44 122 89 137 99 l28 17 82 -63 c210 -161 303 -227 313 -221 5 3 106 80 224 171 l213 165 -28 23 c-16 13 -132 100 -259 194 -126 94 -241 179 -255 189 -152 114 -287 213 -295 216 -5 2 -107 -70 -226 -159z"
        id="path3727" />
   </g>
-  <path
-     style="fill:none;stroke:#ffffff;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 159.47559,482.40401 -13.72972,9.43856"
-     id="path4558"
-     inkscape:connector-curvature="0" />
-  <path
-     style="fill:none;stroke:#ffffff;stroke-width:2.60721636px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 145.82324,614.09944 0.65498,-134.2217"
-     id="path4560"
-     inkscape:connector-curvature="0" />
 </svg>

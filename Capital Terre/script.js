@@ -79,7 +79,7 @@ $(document).ready(function () {
 
         //imgBandeOblique.classList.remove("paddingRightMaxT");
 
-        imgBandeOblique.style.left = "-25%";
+        imgBandeOblique.style.left = "-440px";
 
 
 
@@ -106,9 +106,9 @@ $(document).ready(function () {
 
 
 
-        logo2.style.height = "120vh";
-        logo2.style.top = 0;
-        logo2.style.left = "0%";
+        logo2.style.height = "1100px";
+        logo2.style.top = "3%";
+        logo2.style.left = "2%";
 
 
     }, 1000);
@@ -118,9 +118,9 @@ $(document).ready(function () {
     setTimeout(function () {
         divIntro.style.display = "none";
 
-        logo1.style.left = "0%";
-        logo1.style.height = "120vh";
-        logo1.style.top = 0;
+        logo1.style.left = "2%";
+        logo1.style.height = "1100px";
+        logo1.style.top = "3%";
 
 
     }, 2000);
