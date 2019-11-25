@@ -26,12 +26,19 @@ var textP3 = document.getElementById("textP3");
 var imgPanel3 = document.getElementById("imgPanel3");
 var textP4 = document.getElementById("textP4");
 var imgPanel4 = document.getElementById("imgPanel4");
+var indice1 = document.getElementById("indice1");
+var indice2 = document.getElementById("indice2");
+var indice3 = document.getElementById("indice3");
+var indice4 = document.getElementById("indice4");
+var indexPanel =1;
 
 
 
 
 
-
+var hauteur_fenetre = window.innerHeight;
+var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
+var hauteur_pannel = (0.95 * window.innerHeight);
 
 
 
@@ -49,6 +56,7 @@ onglet[1].style.borderTopColor = "rgb(0, 0, 0)";
 
 
 $(document).ready(function () {
+    indice1.classList.add("active");
 
     setTimeout(function () {
     setInterval(function () {
@@ -95,7 +103,7 @@ $(document).ready(function () {
     setTimeout(function () {
         divIntro.style.display = "none";
         imgPetitLogoNav.style.opacity = 0.7;
-    }, 2400);
+    }, 1000);
 
 
 });
@@ -104,9 +112,7 @@ $(document).ready(function () {
 function update_menu() {
 
     var scroll_Y = window.scrollY;
-    var hauteur_fenetre = window.innerHeight;
-    var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
-    var hauteur_pannel = (0.95 * window.innerHeight);
+
 
 
     var hauteur_menu = menu.offsetHeight;
@@ -133,24 +139,44 @@ function update_menu() {
         navbarSectionText.style.color = "black";
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
+        indexPanel = 4;
+
         navbarSectionText.style.color = "black";
         imgPanel4.style.marginLeft = "0";
         imgPanel4.style.opacity = "1";
         textP4.style.opacity = "0.7";
+        indice4.classList.add("active");
+        indice3.classList.remove("active");
+
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
+        indexPanel = 3;
+
         navbarSectionText.style.color = "black";
         imgPanel3.style.marginLeft = "-10vw";
         imgPanel3.style.opacity = "1";
         textP3.style.opacity = "1";
         imgPanel3.style.marginTop = "-5vh";
+        indice4.classList.remove("active");
+        indice3.classList.add("active");
+        indice2.classList.remove("active");
+
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
+        indexPanel = 2;
+
         navbarSectionText.style.color = "black";
 
        imgPanel2.style.marginLeft = "0";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
+
+        indice3.classList.remove("active");
+        indice2.classList.add("active");
+        indice1.classList.remove("active");
+
+
+
 
 
        /* #imgPanel1{
@@ -179,6 +205,11 @@ function update_menu() {
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
+        indexPanel = 1;
+        indice1.classList.add("active");
+        indice2.classList.remove("active");
+
+
 
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "black";
@@ -233,7 +264,35 @@ $("#leftSidebar ul li a").click(function (e) {
 // detect a mousewheel event (note: relies on jquery mousewheel plugin):
 
 
+indice1.onclick = function() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+    indice1.classList.add("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
 
+}
+indice2.onclick = function() {
+    window.scrollTo({top: hauteur_pannel, behavior : "smooth"});
+    indice2.classList.add("active");
+    indice1.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+}
+indice3.onclick = function() {
+    window.scrollTo(0,(hauteur_pannel*2));
+    indice3.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice4.classList.remove("active");
+}
+indice4.onclick = function() {
+    window.scrollTo(0,(hauteur_pannel*3));
+    indice4.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+}
 
 
 window.addEventListener("mousewheel", swipe);
@@ -292,22 +351,22 @@ function swipe(e) {
     } else if (lastScrollTop === div6y) {
         targetUp = $('#panel5');
         targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop < div2y + 50 || lastScrollTop < div2y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div2y + 0 || lastScrollTop < div2y - 5) {
         targetUp = $('#panel1');
         targetDown = $('#panel2');
-    } else if (scrollDirection == "down" && lastScrollTop < div3y + 50 || lastScrollTop < div3y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div3y + 5 || lastScrollTop < div3y - 5) {
         targetUp = $('#panel2');
         targetDown = $('#panel3');
-    } else if (scrollDirection == "down" && lastScrollTop < div4y + 50 || lastScrollTop < div4y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div4y + 5 || lastScrollTop < div4y - 5) {
         targetUp = $('#panel3');
         targetDown = $('#panel4');
-    } else if (scrollDirection == "down" && lastScrollTop < div5y + 50 || lastScrollTop < div5y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div5y + 5 || lastScrollTop < div5y - 5) {
         targetUp = $('#panel4');
         targetDown = $('#panel5');
-    } else if (scrollDirection == "down" && lastScrollTop < div6y + 50 || lastScrollTop < div6y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div6y + 5 || lastScrollTop < div6y - 5) {
         targetUp = $('#panel5');
         targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 5) {
         targetUp = $('#panel6');
         targetDown = $('#panel6');
     } // end else if
@@ -349,9 +408,7 @@ $("#sidePanelClose").click(function (e) {
 
 
 
-
-
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
     var wrap = document.getElementById('wrap');
     var fps = new FullPageScroll(wrap);
@@ -380,4 +437,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+*/
+
+
 

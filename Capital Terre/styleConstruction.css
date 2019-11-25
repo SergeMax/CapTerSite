@@ -768,73 +768,35 @@ opacity: 0;
 #textTitreMob {
     display: none;
 }
-
-
-
-
-
-#wrap {
-    position: relative;
-    overflow: hidden;
-}
-
-section {
-    box-sizing: border-box;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    font-size: 10vmin;
-    padding: 1em;
-    color: hsla(0, 0%, 100%, .8);
-    background-position: center center;
-    background-size: cover;
-}
-
-section:first-child {
-    background-image: url('https://source.unsplash.com/Bj_MIJ3vpT4/1920x1080');
-}
-
-section:nth-child(2) {
-    background-image: url('https://source.unsplash.com/jWskS_wLMDo/1920x1080');
-}
-
-section:nth-child(3) {
-    background-image: url('https://source.unsplash.com/O6vaYviRDoo/1920x1080');
-}
-
-section:nth-child(4) {
-    background-image: url('https://source.unsplash.com/vPOYZac2hiE/1920x1080');
-}
+/*////////////////////////////////////////////////////////////////////*/
 
 #indicator {
     position: absolute;
-    top: 0px;
+    top: -60px;
     left: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 4000;
 }
 
 #indicator > div {
-    background-color: white;
+    background-color: black;
     width:5px;
     height:5px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 40px;
+    margin-left: 20px;
     cursor: pointer;
+    opacity: 0.15;
 }
 
 #indicator > div.active {
-    transform: scale(1.6);
+    transform: scale(1.7);
 }
 
-
-
-
-
-
-
+/*//////////////////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 1240px) {
 
@@ -1027,6 +989,10 @@ section:nth-child(4) {
         margin-right: 3vw;
 
     }
+
+    #indicator > div {
+
+        margin-left: -3px;}
 
     #phraseTop {
         display: none;
