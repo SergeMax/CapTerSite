@@ -19,6 +19,16 @@ var textTerres = document.getElementById("textTerres");
 var imgPanel1 = document.getElementById("imgPanel1");
 var textTerres = document.getElementById("textTerres");
 var textP1 = document.getElementById("textP1");
+var textP2 = document.getElementById("textP2");
+var imgPanel2 = document.getElementById("imgPanel2");
+
+var textP3 = document.getElementById("textP3");
+var imgPanel3 = document.getElementById("imgPanel3");
+var textP4 = document.getElementById("textP4");
+var imgPanel4 = document.getElementById("imgPanel4");
+
+
+
 
 
 
@@ -37,7 +47,7 @@ onglet[1].style.borderTopColor = "rgb(0, 0, 0)";
 
 
 
-var i;
+
 $(document).ready(function () {
 
     setTimeout(function () {
@@ -124,12 +134,25 @@ function update_menu() {
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         navbarSectionText.style.color = "black";
+        imgPanel4.style.marginLeft = "0";
+        imgPanel4.style.opacity = "1";
+        textP4.style.opacity = "0.7";
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
         navbarSectionText.style.color = "black";
+        imgPanel3.style.marginLeft = "-10vw";
+        imgPanel3.style.opacity = "1";
+        textP3.style.opacity = "1";
+        imgPanel3.style.marginTop = "-5vh";
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
         navbarSectionText.style.color = "black";
+
+       imgPanel2.style.marginLeft = "0";
+        imgPanel2.style.opacity = "1";
+        textP2.style.opacity = "1";
+
+
        /* #imgPanel1{
             width: 40%;
             height: auto;
@@ -208,6 +231,10 @@ $("#leftSidebar ul li a").click(function (e) {
 
 //--- START SCROLL EVENTS ---//
 // detect a mousewheel event (note: relies on jquery mousewheel plugin):
+
+
+
+
 
 window.addEventListener("mousewheel", swipe);
 
@@ -318,3 +345,39 @@ $("#sidePanelClose").click(function (e) {
     $("#mainStack").removeClass("shift");
 }); // end click
 //--- END SHOW/HIDE SIDE PANEL EVENTS ---//
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var wrap = document.getElementById('wrap');
+    var fps = new FullPageScroll(wrap);
+    var indicator = document.createElement('div');
+    indicator.id = 'indicator';
+    var slideIndicators = [];
+    fps.slides.forEach(function(slide, index){
+        var slideIndicator = document.createElement('div');
+        slideIndicator.onclick = function() {
+            fps.goToSlide(index);
+        }
+        if (index === fps.currentSlide) {
+            slideIndicator.className = "active";
+        }
+        indicator.appendChild(slideIndicator);
+        slideIndicators.push(slideIndicator);
+    });
+    document.body.appendChild(indicator);
+    fps.onslide = function() {
+        slideIndicators.forEach(function(slideIndicator, index) {
+            if (index === fps.currentSlide) {
+                slideIndicator.className = "active";
+            } else {
+                slideIndicator.className = "";
+            }
+        });
+    }
+});
+

@@ -179,8 +179,8 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     flex-direction: row;
     justify-content: flex-end;
     width: 80%;
-    margin-left: 70vh;
-    margin-right: 5vh;
+    margin-left: 40vw;
+    margin-right: 5vw;
 
 
 }
@@ -559,7 +559,7 @@ z-index: 250;
 
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
-    margin-top: 10%;
+    margin-top: 2%;
     text-align: justify;
     /*background-color: white;*/
    /* padding: 50px;*/
@@ -578,8 +578,8 @@ z-index: 250;
     width: 40%;
     height: auto;
     margin-right: 10vw;
-    margin-left: -20vw;
-opacity: 0;
+    margin-left: -5vw;
+    opacity: 0;
     object-fit: cover;
 transition: margin-left 1s, opacity 2s;
 }
@@ -604,11 +604,14 @@ transition: margin-left 1s, opacity 2s;
  }
 
 .divContenuPanel2 > p{
+position: absolute;
+    top : 25%;
+    left: -2%;
+    width: 25%;
+    height: 40%;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
-    margin-top: 5%;
-    margin-left: -3vw;
-    margin-right: 5vw;
+transition: opacity 2s;
     text-align: justify;
 
 
@@ -617,11 +620,20 @@ transition: margin-left 1s, opacity 2s;
 
 
 #imgPanel2{
+    position: absolute;
+    top : 20%;
+    left: 30%;
     width: 70%;
     height: auto;
-
+    opacity: 0;
+    margin-left: 5vw;
+opacity: 0;
     object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+}
 
+#textP2{
+    opacity: 0;
 }
 
 
@@ -647,15 +659,29 @@ z-index: 2000;
     height: 50vh;
     padding: 80px;
     text-align: justify;
+    transition: margin-left 2s, opacity 2s;
+
 }
 
+#textP3{
+    opacity: 0;
+}
 
 #imgPanel3{
+
+    position: absolute;
+    top : 0%;
+    left: 0%;
+
+opacity: 0;
+
     width: 90%;
-    height: 35%;
-    margin-left: -10vw;
-    margin-top: -7vh;
+    height: 80vh;
+    margin-left: -5vw;
+    margin-top: -3vh;
     object-fit: cover;
+    transition: margin-left 2s, opacity 4s, margin-top 2s;
+
 
 }
 
@@ -665,7 +691,7 @@ z-index: 2000;
     flex-direction: row;
     position: relative;
     top: 26%;
-    left: 5%;
+    left: 5vw;
     width: 80%;
     height: auto;
 }
@@ -675,7 +701,7 @@ z-index: 2000;
     font-size: 20px;
     top: -7vh;
     left: -3vw;
-    z-index: 2000;
+
     width: 25vw;
     height: 40vh;
     padding: 50px;
@@ -684,6 +710,11 @@ z-index: 2000;
     color: black;
 
     text-align: justify;
+    transition: margin-left 2s, opacity 2s;
+
+}
+#textP4{
+    opacity: 0;
 }
 
 
@@ -691,10 +722,12 @@ z-index: 2000;
     position: absolute;
     top: 0vh;
     left: 30vw;
-    width: auto;
+    width: 60vw;
     height: 70vh;
 
     object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+
 
 }
 
@@ -735,6 +768,73 @@ z-index: 2000;
 #textTitreMob {
     display: none;
 }
+
+
+
+
+
+#wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 10vmin;
+    padding: 1em;
+    color: hsla(0, 0%, 100%, .8);
+    background-position: center center;
+    background-size: cover;
+}
+
+section:first-child {
+    background-image: url('https://source.unsplash.com/Bj_MIJ3vpT4/1920x1080');
+}
+
+section:nth-child(2) {
+    background-image: url('https://source.unsplash.com/jWskS_wLMDo/1920x1080');
+}
+
+section:nth-child(3) {
+    background-image: url('https://source.unsplash.com/O6vaYviRDoo/1920x1080');
+}
+
+section:nth-child(4) {
+    background-image: url('https://source.unsplash.com/vPOYZac2hiE/1920x1080');
+}
+
+#indicator {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#indicator > div {
+    background-color: white;
+    width:5px;
+    height:5px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#indicator > div.active {
+    transform: scale(1.6);
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1240px) {
 
@@ -841,9 +941,7 @@ z-index: 2000;
         display: none;
         visibility: hidden;
     }
-    #imgPanel2{
-        display: none;
-    }
+
 
     #imgPanel1{
         display: block;
@@ -976,20 +1074,24 @@ z-index: 2000;
         flex-direction: column;
         position: relative;
         top: 17vh;
+
         left: 10%;
         width: 80%;
         height: auto;
     }
 
     .divContenuPanel1 > p{
+        position: static;
         font-family: "Ma Super Fonte light", Verdana;
         font-size: 17px;
+        margin-top: 20px;
+
 
     }
 
     #textTitreMob{
 display: block;
-        position: absolute;
+        position: fixed;
         top: 6vh;
         left: 40vw;
 
@@ -1020,28 +1122,108 @@ display: none;
         display: flex;
         flex-direction: column;
         position: relative;
-        top: 30%;
+        top: 17vh;
+
         left: 10%;
         width: 80%;
         height: auto;
     }
 
     .divContenuPanel2 > p{
+        position: static;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 20px;
+        font-size: 17px;
+        margin-top: 20px;
+        width: 100%;
+
 
     }
 
 
     #imgPanel2{
+        display: block;
+        position: static;
         width: 100%;
+        margin-top: 5vh;
         height: auto;
 
     }
 
 
+    .divContenuPanel3{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel3 > p{
+        position: absolute;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 17px;
+        margin-top: 20px;
+        width: 70%;
+        padding: 50px;
+        height: 80vh;
+
+left: 10vw;
+
+    }
 
 
+    #imgPanel3{
+
+        position: absolute;
+        width: 200%;
+        margin-top: 7vh;
+        height: auto;
+
+    }
+
+
+    .divContenuPanel4{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+        z-index: 3000;
+
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel4>p{
+        position: absolute;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 17px;
+        top: 20vh;
+        left: 0;
+        width: 70%;
+        z-index: 6000;
+        background-color:whitesmoke ;
+        color: black;
+        opacity: 0;
+        z-index: 3000;
+
+
+
+
+    }
+
+
+    #imgPanel4{
+        position: absolute;
+        width: 100vw;
+        margin-top: 3vh;
+        height: auto;
+        top: -7vh;
+        left: -10vw;
+        z-index: 200;
+    }
 
 
 

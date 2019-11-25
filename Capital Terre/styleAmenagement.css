@@ -183,8 +183,8 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     flex-direction: row;
     justify-content: flex-end;
     width: 80%;
-    margin-left: 70vh;
-    margin-right: 5vh;
+    margin-left: 40vw;
+    margin-right: 5vw;
 
 
 }
