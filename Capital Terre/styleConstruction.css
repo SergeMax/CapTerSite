@@ -1,0 +1,1084 @@
+@font-face {
+    font-family: "Ma Super Fonte medium";
+    src: url('Asset/font/Futura/Vfutura-Medium.otf');
+    font-weight: 600;
+
+}
+
+
+
+
+
+@font-face {
+    font-family: "Ma Super Fonte light";
+    font-weight: 300;
+    src: url('Asset/font/Futura/Vfutura-Light.otf');
+
+}
+
+@font-face {
+    font-family: "Ma Super Fonte heavy";
+    font-weight: 600;
+    src: url('Asset/font/Futura/Vfutura-Heavy.otf');
+}
+
+@font-face {
+    font-family: "Ma Super Fonte bold";
+    font-weight: bold;
+    src: url('Asset/font/Futura/Vfutura-Bold.otf');
+}
+
+@font-face {
+    font-family: "Astloch normal";
+    src: url('Asset/font/Astloch/Astloch-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Astloch bold";
+    font-weight: bold;
+    src: url('Asset/font/Astloch/Astloch-Bold.ttf');
+}
+
+body {
+    font-family: "Ma Super Fonte", Helvetica, Arial, sans-serif;
+    height: 400VH;
+    scroll-behavior: inherit;
+
+}
+
+a:link
+{
+    text-decoration:none;
+    color: black;
+}
+
+a
+{
+    text-decoration:none;
+    color: black;
+}
+
+
+#divHeaderFixe {
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+
+}
+
+
+video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;*/
+    transition: 0.1s opacity;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+.videoTop {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+
+#navbar {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5vh;
+    position: fixed;
+    z-index: 2000;
+
+
+}
+
+#divIntro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 300;
+
+}
+
+#imgPetitLogoNav{
+    position: absolute;
+width: 5vw;
+    height: auto;
+    margin-top: 10px;
+    right: 65vw;
+    opacity: 0;
+    transition: opacity 2s;
+
+}
+
+#imgBandeOblique{
+    position: absolute;
+    width: auto;
+    height: 120vh;
+    margin-top: 0;
+    left: 40vw;
+    opacity: 0.1;
+    transition: opacity 0.1s;
+
+}
+#logo1{
+position: absolute;
+    top: 60%;
+    right: 5%;
+    left:-5%;
+
+    max-width: auto;
+    /*  height: 1000px;*/
+    height: 1vh;
+    opacity: 0;
+
+    margin-top: 0;
+transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
+    z-index: 500;
+
+}
+
+#logo2{
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    left:-5%;
+
+    max-width: auto;
+    /*  height: 1000px;*/
+    height: 1vh;
+    opacity: 0;
+
+    margin-top: 0;
+    transition: opacity 4s, left 2.5s, height 2s, top 2s;
+    z-index: 500;
+
+}
+
+#imgBurger{display: none;}
+
+#sectionNav {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    margin-left: 70vh;
+    margin-right: 5vh;
+
+
+}
+
+
+#sectionPlacement {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-direction: row;
+    justify-content: space-around;
+    /* justify-content: flex-start;*/
+    margin-right: 0vh;
+    color: black;
+    font-size: 25px;
+    font-family: "Ma Super Fonte medium", Helvetica, Arial, sans-serif;
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(255,255,255,0);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.onglet{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top: solid 2px;
+    border-top-color:rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
+    height: 40px;
+    opacity: 0;
+    transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
+    white-space: nowrap;
+
+
+}
+
+
+.onglet:hover{
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 3px;
+    border-top: solid 2px;
+    border-top-color: rgb(0, 0, 0);
+    background-color: rgba(255,255,255,1);
+    transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
+}
+
+.ongletSurFondBlanc:hover{
+
+    background-color: rgba(255,255,255,1);
+    border-top-color:rgba(0,0,0,1);
+
+
+}
+
+
+#divLogoNav {
+    width: 40%;
+    left: 0px;
+    min-width: 500px;
+    transition: opacity 0.3s;
+    height: 100%;
+
+}
+
+#imgLogoNav {
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    left:-55%;
+
+    max-width: auto;
+  /*  height: 1000px;*/
+    height: 120vh;
+    opacity: 0;
+
+    margin-top: 0;
+    transition: opacity 4s, left 2s, height 2s;
+    z-index: 400;
+
+}
+
+
+#divTextCapitalsTerre {
+    position: absolute;
+    width: 100%;
+
+    height: 300px;
+    top: 44%;
+    left: 0;
+    transition: opacity 0.1s;
+    background-color: rgba(255,255,255,0.055);
+    padding-left: 51vw;
+   /* margin-top: -2vh;*/
+   /* padding-bottom: 1px;
+    padding-top: 1px 0;
+*/
+}
+
+#textCapitalsTerre{
+
+    /*font-family: 'Overpass', sans-serif;*/
+   /*font-family: 'Cormorant Garamond', serif;*/
+    font-family: 'Playfair Display', serif;
+    /* font-family: "Ma Super Fonte light";*/
+    /*position: relative;*/
+    font-weight: 400;
+   /* top:-100%;
+    left: 0;*/
+    margin-top: 0px;
+    font-size: 7em;
+    color: white;
+    opacity: 0;
+    letter-spacing: 0px;
+   /* text-shadow:  2px 8px 3px rgba(0,0,0,0.1),
+    0px -5px 35px rgba(255,255,255,0.5);*/
+    transition: opacity 3s, letter-spacing 1s, padding-left 2s, font-size 1s;
+
+}
+
+
+#textTerres{
+   /* font-family: 'Cormorant Garamond', serif;*/
+    font-family: 'Playfair Display', serif;
+
+   /* font-family: 'Overpass', sans-serif;*/
+    /* font-family: "Ma Super Fonte light";*/
+    position: relative;
+    font-weight: 400;
+    top: 0;
+    left: 0;
+    font-size: 7em;
+    color: white;
+    opacity: 0;
+    letter-spacing: 0px;
+
+    padding-left: 40vw;
+    margin-top: 0vh;
+    transition: opacity 3s, letter-spacing 1s, padding-left 2s, font-size 1s;
+
+}
+
+.paddingLefttMax{
+    padding-left: 20vw;
+}
+.paddingLefttMaxT{
+ right: -40%;
+    visibility: hidden;
+}
+
+
+#phraseTop {
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    font-family: "Ma Super Fonte light", Helvetica, Arial, sans-serif;
+    letter-spacing: 7px;
+
+    top: 64%;
+    left: 60%;
+    transition: opacity 0.1s;
+
+}
+
+#contenu {
+
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    top: 95vh;
+    background-color: #f5f5f5;
+    z-index: 101;
+    opacity: 0.2;
+
+}
+
+/*/////    FLECHE QUI CLIGNOTTE   ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.fleche a {
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: black;
+    font-family: "Ma Super Fonte light", Helvetica, Arial, sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.flech a:hover {
+    opacity: .5;
+}
+
+
+#section05 a {
+    padding-top: 70px;
+}
+#section05 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+
+
+.fleche{
+    position: absolute;
+    top: 98vh;
+    left: 48%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    z-index: 300;
+}
+.fleche a:hover {
+    opacity: .5;
+}
+
+#imgPanel1Mob{
+    display: none;
+}
+
+    /*transition: opacity 0.3s;*/
+
+
+
+
+
+
+/*/////  FIN  FLECHE QUI CLIGNOTTE   ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+* {
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#leftSidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; /* needs to stay on top of the mainStack AND the sidePanel */
+    /* for demo only: */
+    min-width: 250px;
+    border-right: 1px solid #000;
+    background-color: rgba(255,255,255,0.5);
+}
+#leftSidebar > ul {
+    /* all of these are for demo only: */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#leftSidebar > ul > li {
+    /* all of these are for demo only: */
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #999;
+}
+#panel1, #panel2, #panel3, #panel4, #panel5, #panel6 {
+
+position: relative;
+    /* all of these are for demo only: */
+    width: 100%;
+    height: 95vh;
+    /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+z-index: 250;
+}
+
+.panel{
+    overflow: hidden;
+}
+
+#panel1, #panel3, #panel5 {
+    /* for demo only: */
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+#panel1{
+    opacity: 1;
+
+}
+
+#panel2, #panel4, #panel6 {
+    /* for demo only: */
+    background-color: white;
+    opacity: 1;
+}
+
+#panel2{
+   /* -webkit-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+    box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);*/
+
+    opacity: 1;
+}
+
+
+.divContenuPanel1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel1 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    margin-top: 10%;
+    text-align: justify;
+    /*background-color: white;*/
+   /* padding: 50px;*/
+    height: 32vh;
+
+}
+
+
+#imgPanel1{
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+    object-fit: cover;
+
+}
+
+#imgPanel1Mob{
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+    object-fit: cover;
+
+}
+
+
+.divContenuPanel2{
+     display: flex;
+     flex-direction: row;
+     position: relative;
+     top: 25%;
+     left: 10%;
+     width: 90%;
+     height: auto;
+ }
+
+.divContenuPanel2 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: -3vw;
+    margin-right: 5vw;
+    text-align: justify;
+
+
+
+}
+
+
+#imgPanel2{
+    width: 70%;
+    height: auto;
+
+    object-fit: cover;
+
+}
+
+
+.divContenuPanel3{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel3 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    position: absolute;
+    background-color: white;
+    top: -7vh;
+    left: 30vw;
+z-index: 2000;
+    width: 40vw;
+    height: 50vh;
+    padding: 80px;
+    text-align: justify;
+}
+
+
+#imgPanel3{
+    width: 90%;
+    height: 35%;
+    margin-left: -10vw;
+    margin-top: -7vh;
+    object-fit: cover;
+
+}
+
+
+.divContenuPanel4{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 5%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel4 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    top: -7vh;
+    left: -3vw;
+    z-index: 2000;
+    width: 25vw;
+    height: 40vh;
+    padding: 50px;
+    padding-left: 70px;
+
+    color: black;
+
+    text-align: justify;
+}
+
+
+#imgPanel4{
+    position: absolute;
+    top: 0vh;
+    left: 30vw;
+    width: auto;
+    height: 70vh;
+
+    object-fit: cover;
+
+}
+
+
+
+
+
+#sidePanelButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* for demo only: */
+    cursor: pointer;
+    padding: 40px;
+    border: 1px solid #000;
+    background-color: tomato;
+}
+#sidePanel {
+    width: 100%;
+    height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    left: 100%;
+    transition: left 0.4s; /* creates sliding motion */
+    -webkit-transition: left 0.4s;
+    z-index: 1; /* needs to be above the mainStack */
+    background-color: tomato; /* you need to set a background-color here so this panel covers up the others when it slides in. */
+    /* for demo only: */
+    text-align: center;
+    font-size: 50px;
+}
+#sidePanel.open {
+    left: 0; /* move the sidePanel into the viewport when you click the button */
+}
+
+#textTitreMob {
+    display: none;
+}
+
+@media screen and (max-width: 1240px) {
+
+
+    #sectionPlacement {
+        width: 130%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        height: 80px;
+    }
+
+    #sectionNav{
+        margin-left: -20vw;
+        margin-right: 0vh;
+        width: 80vw;
+
+    }
+
+    #navbar{
+
+        magin-left:-100px;
+
+    }
+
+
+    .onglet{
+
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-top: solid 2px;
+        border-top-color:rgba(180,15,0,0);
+        background-color: rgba(255,255,255,0);
+        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s;
+    }
+
+
+    #sectionPlacement {
+        font-size: 22px;
+    }
+
+
+    #phraseTop {
+        font-size: 17px;
+        left: 35%;
+    }
+
+    #imgLogoNav {
+        display: none;
+    }
+
+    #logo1div{
+    display: none;
+    }
+
+    #logo2div{
+        display: none;
+
+    }
+
+
+    #imgPetitLogoNav{
+        left: 40px;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+
+    #imgPetitLogoNav{
+        position: absolute;
+        width: 5vw;
+        height: auto;
+        margin-top: 10px;
+      left: 20px;
+        opacity: 0;
+        transition: opacity 2s;
+
+    }
+
+
+    #divTextCapitalsTerre {
+        padding-left: 41vw;
+
+    }
+
+    .onglet{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #imgPanel1{
+        display: none;
+        visibility: hidden;
+    }
+    #imgPanel2{
+        display: none;
+    }
+
+    #imgPanel1{
+        display: block;
+    }
+
+
+    #imgPanel1Mob {
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+    object-fit: cover;
+    }
+
+    #sectionPlacement {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 90vh;
+        height: 60vh;
+    }
+
+    .onglet{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+    }
+
+
+    .onglet:hover{
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 3px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        cursor: pointer;
+       /* padding-right: 0px;
+        padding-top: 0px;*/
+        border-top: solid 2px;
+        border-top-color:rgba(255,255,255,1);
+        background-color: rgba(255,255,255,0.1);
+        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
+    }
+
+    #sectionPlacement {
+       display: none;
+    }
+
+
+
+
+    #divTextCapitalsTerre {
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        top: 55%;
+        left: 0;
+        transition: opacity 0.1s;
+        background-color: rgba(255,255,255,0.055);
+        padding-left: 10vw;
+        /* margin-top: -2vh;*/
+        /* padding-bottom: 1px;
+         padding-top: 1px 0;
+     */
+    }
+
+
+    #imgPetitLogoNav{
+        opacity: 1;
+    }
+
+
+    #sectionNav p {
+        color: white;
+        font-size: 20px;
+        font-family: "Ma Super Fonte medium", Helvetica, Arial, sans-serif;
+
+        margin-left: 7vh;
+        margin-right: 3vw;
+
+    }
+
+    #phraseTop {
+        display: none;
+    }
+
+    #imgPetitLogoNav{
+        position: absolute;
+        width: 10vh;
+        height: auto;
+        margin-top: -2vh;
+        left: 5vw;
+        opacity: 0;
+        transition: opacity 2s;
+
+    }
+    #imgBurger{
+        display: block;
+        position: absolute;
+        width: 7vh;
+        height: auto;
+        margin-top: -1vh;
+        right: 3.5vw;
+        opacity: 0.2;
+        transition: opacity 2s;
+    }
+
+    #textLeDomaine{
+        top: 0%;
+        left: 1%;
+        font-size: 2em;
+    }
+
+    #mainStack{
+        margin-left: 0;
+    }
+
+    #panel1, #panel2, #panel3, #panel4, #panel5, #panel6 {
+        width: 100vw;
+
+    }
+
+
+    .divContenuPanel1{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel1 > p{
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 17px;
+
+    }
+
+    #textTitreMob{
+display: block;
+        position: absolute;
+        top: 6vh;
+        left: 40vw;
+
+        font-family: "Ma Super Fonte medium", Verdana;
+        border-top: solid 1px;
+        border-top-color:rgba(0,0,0,1);
+        font-size: 20px;
+        z-index: 400;
+
+
+    }
+
+
+    #imgPanel1{
+display: none;
+
+
+    }
+    #imgPanel1Mob{
+        display: block;
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    .divContenuPanel2{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel2 > p{
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 20px;
+
+    }
+
+
+    #imgPanel2{
+        width: 100%;
+        height: auto;
+
+    }
+
+
+
+
+
+
+
+    .displaynone{
+        visibility: hidden;
+        display: none;
+    }
+
+    }
+
+@media screen and (max-height: 500px) {
+
+
+
+}
+
+
+@media screen and (max-height: 400px) and (max-width: 670px) {
+
+    #divTextCapitalsTerre {
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        top: 35%;
+        left: 0;
+        transition: opacity 0.1s;
+        background-color: rgba(255,255,255,0.055);
+        padding-left: 10vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
+
+
+
+    }
+
+}
+
+
+
+@media screen and (max-device-width: 800px) {
+   /* html {
+        background: url(Asset/Image/fondHerbePortrait.jpg) #000 no-repeat center center fixed;
+        background-size: cover ;
+    }
+
+    #bgvid {
+        display: none;
+    }*/
+}
