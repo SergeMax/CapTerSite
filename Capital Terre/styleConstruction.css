@@ -772,8 +772,8 @@ opacity: 0;
 
 #indicator {
     position: absolute;
-    top: -60px;
-    left: 20px;
+    top: -10vh;
+    left: 58px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -796,10 +796,68 @@ opacity: 0;
     transform: scale(1.7);
 }
 
+#trait1{
+    width: 1px;
+    height: 50vh;
+    position: fixed;
+    bottom: 80vh;
+    left: 80px;
+    background: black;
+    opacity: 0.15;
+    z-index: 4000;
+
+}
+
+#trait2{
+    width: 1px;
+    height:25vh;
+    position: fixed;
+    top: 70vh;
+    left: 80px;
+    background: black;
+    opacity: 0.15;
+    z-index: 4000;
+
+
+}
+
 /*//////////////////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 1240px) {
 
+.panel p{
+    font-size: 15px;
+}
+
+    #panel3 p{
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+    }
+
+    #indicator {
+        top: -10vh;
+        left: 20px;
+    }
+
+    #indicator > div {
+       margin : 20px;
+    }
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 40px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 40px;
+    }
 
     #sectionPlacement {
         width: 130%;
@@ -834,7 +892,8 @@ opacity: 0;
         border-top: solid 2px;
         border-top-color:rgba(180,15,0,0);
         background-color: rgba(255,255,255,0);
-        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s;
+        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
+
     }
 
 
@@ -875,6 +934,41 @@ opacity: 0;
 
 @media screen and (max-width: 850px) {
 
+
+    .panel p{
+        font-size: 15px;
+    }
+
+    #panel3 p{
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+    }
+
+    #indicator {
+        top: -10vh;
+        left: 20px;
+    }
+
+    #indicator > div {
+        margin : 20px;
+    }
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 40px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 40px;
+    }
+
     #imgPetitLogoNav{
         position: absolute;
         width: 5vw;
@@ -898,6 +992,23 @@ opacity: 0;
 }
 
 @media screen and (max-width: 700px) {
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 18px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 18px;
+    }
+
+
 
     #imgPanel1{
         display: none;
@@ -957,8 +1068,6 @@ opacity: 0;
     }
 
 
-
-
     #divTextCapitalsTerre {
         position: absolute;
         width: 100%;
@@ -987,11 +1096,9 @@ opacity: 0;
 
         margin-left: 7vh;
         margin-right: 3vw;
-
     }
 
     #indicator > div {
-
         margin-left: -3px;}
 
     #phraseTop {
@@ -1019,11 +1126,6 @@ opacity: 0;
         transition: opacity 2s;
     }
 
-    #textLeDomaine{
-        top: 0%;
-        left: 1%;
-        font-size: 2em;
-    }
 
     #mainStack{
         margin-left: 0;
@@ -1046,10 +1148,10 @@ opacity: 0;
         height: auto;
     }
 
-    .divContenuPanel1 > p{
+    .divContenuPanel1  p{
         position: static;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 17px;
+        font-size: 15px;
         margin-top: 20px;
 
 
@@ -1098,7 +1200,7 @@ display: none;
     .divContenuPanel2 > p{
         position: static;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 17px;
+        font-size: 15px;
         margin-top: 20px;
         width: 100%;
 
@@ -1129,8 +1231,8 @@ display: none;
     .divContenuPanel3 > p{
         position: absolute;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 17px;
-        margin-top: 20px;
+        font-size: 15px;
+        margin-top: 40px;
         width: 70%;
         padding: 50px;
         height: 80vh;
@@ -1165,7 +1267,7 @@ left: 10vw;
     .divContenuPanel4>p{
         position: absolute;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 17px;
+        font-size: 15px;
         top: 20vh;
         left: 0;
         width: 70%;

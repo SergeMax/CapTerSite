@@ -12,12 +12,36 @@ var panel1 = document.getElementById("panel1");
 var imgBandeOblique = document.getElementById("imgLogoNav");
 var logo1 = document.getElementById("logo1");
 var logo2 = document.getElementById("logo2");
-
-
 var panel2 = document.getElementById("panel2");
 var divIntro = document.getElementById("divIntro");
 var textCapital = document.getElementById("textCapitalsTerre");
 var textTerres = document.getElementById("textTerres");
+var imgPanel1 = document.getElementById("imgPanel1");
+var textTerres = document.getElementById("textTerres");
+var textP1 = document.getElementById("textP1");
+var textP2 = document.getElementById("textP2");
+var imgPanel2 = document.getElementById("imgPanel2");
+
+var textP3 = document.getElementById("textP3");
+var imgPanel3 = document.getElementById("imgPanel3");
+var textP4 = document.getElementById("textP4");
+var imgPanel4 = document.getElementById("imgPanel4");
+var indice1 = document.getElementById("indice1");
+var indice2 = document.getElementById("indice2");
+var indice3 = document.getElementById("indice3");
+var indice4 = document.getElementById("indice4");
+var indice5 = document.getElementById("indice5");
+
+var indexPanel =1;
+
+
+
+
+
+var hauteur_fenetre = window.innerHeight;
+var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
+var hauteur_pannel = (0.95 * window.innerHeight);
+
 
 
 var indice = 0.01;
@@ -32,8 +56,9 @@ onglet[2].style.borderTopColor = "rgb(0, 0, 0)";
 
 
 
-var i;
+
 $(document).ready(function () {
+    indice1.classList.add("active");
 
     setTimeout(function () {
     setInterval(function () {
@@ -48,51 +73,39 @@ $(document).ready(function () {
 
         setTimeout(function () {
             onglet[4].style.opacity = 1;
+            imgPanel1.style.marginLeft = "20vw";
+            imgPanel1.style.opacity = "1";
+            textP1.style.opacity = "1";
 
 
         }, 400);
 
     setTimeout(function () {
-
         onglet[3].style.opacity = 1;
-
     }, 800);
 
     setTimeout(function () {
-
-
+        onglet[1].style.opacity = 1;
     }, 1200);
 
     setTimeout(function () {
-        onglet[1].style.opacity = 1;
-
-
     }, 1600);
     setTimeout(function () {
         onglet[0].style.opacity = 1;
-
-
-    }, 2000);
+    }, 1600);
 
 
 
     setTimeout(function () {
         imgPetitLogoNav.style.transition = "opacity 4s";
-
-
-
     }, 500);
 
 
 
     setTimeout(function () {
         divIntro.style.display = "none";
-
         imgPetitLogoNav.style.opacity = 0.7;
-
-
-
-    }, 2400);
+    }, 1000);
 
 
 });
@@ -101,9 +114,7 @@ $(document).ready(function () {
 function update_menu() {
 
     var scroll_Y = window.scrollY;
-    var hauteur_fenetre = window.innerHeight;
-    var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
-    var hauteur_pannel = (0.95 * window.innerHeight);
+
 
 
     var hauteur_menu = menu.offsetHeight;
@@ -130,13 +141,63 @@ function update_menu() {
         navbarSectionText.style.color = "black";
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
+        indexPanel = 4;
+
         navbarSectionText.style.color = "black";
+        imgPanel4.style.marginLeft = "0";
+        imgPanel4.style.opacity = "1";
+        textP4.style.opacity = "0.7";
+        indice4.classList.add("active");
+        indice3.classList.remove("active");
+
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
+        indexPanel = 3;
+
         navbarSectionText.style.color = "black";
+        imgPanel3.style.marginLeft = "-10vw";
+        imgPanel3.style.opacity = "1";
+        textP3.style.opacity = "1";
+        imgPanel3.style.marginTop = "-2vh";
+        indice4.classList.remove("active");
+        indice3.classList.add("active");
+        indice2.classList.remove("active");
+
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
+        indexPanel = 2;
+
         navbarSectionText.style.color = "black";
+
+       imgPanel2.style.marginLeft = "0";
+        imgPanel2.style.opacity = "1";
+        textP2.style.opacity = "1";
+
+        indice3.classList.remove("active");
+        indice2.classList.add("active");
+        indice1.classList.remove("active");
+
+
+
+
+
+       /* #imgPanel1{
+            width: 40%;
+            height: auto;
+            margin-right: 10vw;
+            object-fit: cover;
+
+        }
+
+        #imgPanel1Mob{
+            width: 40%;
+            height: auto;
+            margin-right: 10vw;
+            object-fit: cover;
+
+        }*/
+
+
         // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0.4)";
 
        /* for (i = 0; i < onglet.length; i++) {
@@ -146,6 +207,9 @@ function update_menu() {
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
+        indexPanel = 1;
+        indice1.classList.add("active");
+        indice2.classList.remove("active");
 
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "black";
@@ -160,19 +224,6 @@ function update_menu() {
     }
 }
 
-function load() {
-
-    function scroll_to(contenu) {
-        $('html, body').animate({
-            scrollTop: $(this.contenu).offset().top
-        }, 1000);
-    }
-
-//        scroll_to(document.body);
-
-}
-
-//$(document).ready(load());
 
 window.addEventListener("scroll", update_menu);
 
@@ -211,6 +262,58 @@ $("#leftSidebar ul li a").click(function (e) {
 
 //--- START SCROLL EVENTS ---//
 // detect a mousewheel event (note: relies on jquery mousewheel plugin):
+
+
+indice1.onclick = function() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+    indice1.classList.add("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+
+}
+indice2.onclick = function() {
+    window.scrollTo({top: hauteur_pannel, behavior : "smooth"});
+    indice2.classList.add("active");
+    indice1.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+indice3.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*2, behavior : "smooth"});
+    indice3.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+indice4.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*3, behavior : "smooth"});
+    indice4.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+
+
+indice5.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*4, behavior : "smooth"});
+    indice5.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+
+}
+
+
 
 window.addEventListener("mousewheel", swipe);
 
@@ -268,22 +371,22 @@ function swipe(e) {
     } else if (lastScrollTop === div6y) {
         targetUp = $('#panel5');
         targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop < div2y + 50 || lastScrollTop < div2y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div2y + 0 || lastScrollTop < div2y - 5) {
         targetUp = $('#panel1');
         targetDown = $('#panel2');
-    } else if (scrollDirection == "down" && lastScrollTop < div3y + 50 || lastScrollTop < div3y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div3y + 5 || lastScrollTop < div3y - 5) {
         targetUp = $('#panel2');
         targetDown = $('#panel3');
-    } else if (scrollDirection == "down" && lastScrollTop < div4y + 50 || lastScrollTop < div4y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div4y + 5 || lastScrollTop < div4y - 5) {
         targetUp = $('#panel3');
         targetDown = $('#panel4');
-    } else if (scrollDirection == "down" && lastScrollTop < div5y + 50 || lastScrollTop < div5y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div5y + 5 || lastScrollTop < div5y - 5) {
         targetUp = $('#panel4');
         targetDown = $('#panel5');
-    } else if (scrollDirection == "down" && lastScrollTop < div6y + 50 || lastScrollTop < div6y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop < div6y + 5 || lastScrollTop < div6y - 5) {
         targetUp = $('#panel5');
         targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 50) {
+    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 5) {
         targetUp = $('#panel6');
         targetDown = $('#panel6');
     } // end else if
@@ -321,3 +424,40 @@ $("#sidePanelClose").click(function (e) {
     $("#mainStack").removeClass("shift");
 }); // end click
 //--- END SHOW/HIDE SIDE PANEL EVENTS ---//
+
+
+
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+    var wrap = document.getElementById('wrap');
+    var fps = new FullPageScroll(wrap);
+    var indicator = document.createElement('div');
+    indicator.id = 'indicator';
+    var slideIndicators = [];
+    fps.slides.forEach(function(slide, index){
+        var slideIndicator = document.createElement('div');
+        slideIndicator.onclick = function() {
+            fps.goToSlide(index);
+        }
+        if (index === fps.currentSlide) {
+            slideIndicator.className = "active";
+        }
+        indicator.appendChild(slideIndicator);
+        slideIndicators.push(slideIndicator);
+    });
+    document.body.appendChild(indicator);
+    fps.onslide = function() {
+        slideIndicators.forEach(function(slideIndicator, index) {
+            if (index === fps.currentSlide) {
+                slideIndicator.className = "active";
+            } else {
+                slideIndicator.className = "";
+            }
+        });
+    }
+});
+*/
+
+
+

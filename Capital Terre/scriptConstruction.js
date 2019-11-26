@@ -30,6 +30,8 @@ var indice1 = document.getElementById("indice1");
 var indice2 = document.getElementById("indice2");
 var indice3 = document.getElementById("indice3");
 var indice4 = document.getElementById("indice4");
+var indice5 = document.getElementById("indice5");
+
 var indexPanel =1;
 
 
@@ -156,7 +158,7 @@ function update_menu() {
         imgPanel3.style.marginLeft = "-10vw";
         imgPanel3.style.opacity = "1";
         textP3.style.opacity = "1";
-        imgPanel3.style.marginTop = "-5vh";
+        imgPanel3.style.marginTop = "-2vh";
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");
@@ -270,6 +272,8 @@ indice1.onclick = function() {
     indice2.classList.remove("active");
     indice3.classList.remove("active");
     indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
 
 }
 indice2.onclick = function() {
@@ -278,21 +282,39 @@ indice2.onclick = function() {
     indice1.classList.remove("active");
     indice3.classList.remove("active");
     indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
 }
 indice3.onclick = function() {
-    window.scrollTo(0,(hauteur_pannel*2));
+    window.scrollTo({top: hauteur_pannel*2, behavior : "smooth"});
     indice3.classList.add("active");
     indice1.classList.remove("active");
     indice2.classList.remove("active");
     indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
 }
 indice4.onclick = function() {
-    window.scrollTo(0,(hauteur_pannel*3));
+    window.scrollTo({top: hauteur_pannel*3, behavior : "smooth"});
     indice4.classList.add("active");
     indice1.classList.remove("active");
     indice2.classList.remove("active");
     indice3.classList.remove("active");
+    indice5.classList.remove("active");
+
 }
+
+
+indice5.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*4, behavior : "smooth"});
+    indice5.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+
+}
+
 
 
 window.addEventListener("mousewheel", swipe);
