@@ -31,6 +31,11 @@ var indice2 = document.getElementById("indice2");
 var indice3 = document.getElementById("indice3");
 var indice4 = document.getElementById("indice4");
 var indice5 = document.getElementById("indice5");
+var imgPanel51 = document.getElementById("imgPanel5-1");
+var imgPanel54 = document.getElementById("imgPanel5-4");
+var textP5 = document.getElementById("textP4");
+
+
 
 var indexPanel =1;
 
@@ -138,13 +143,46 @@ function update_menu() {
     if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
         navbarSectionText.style.color = "black";
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
+        indexPanel = 5;
+
         navbarSectionText.style.color = "black";
+        imgPanel51.style.opacity = "1";
+        imgPanel54.style.opacity = "1";
+
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            imgPanel54.style.left = "55vw";
+            imgPanel51.style.left = "8vw";
+
+        } else {
+            imgPanel54.style.left = "35vw";
+            imgPanel51.style.left = "8vw";
+        }
+
+        textP5.style.opacity = "0.7";
+        indice5.classList.add("active");
+        indice4.classList.remove("active");
+        indice3.classList.remove("active");
+        indice2.classList.remove("active");
+        indice1.classList.remove("active");
+
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
-
         navbarSectionText.style.color = "black";
-        imgPanel4.style.marginLeft = "0";
+
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            imgPanel4.style.left = "30vw";
+            imgPanel4.style.width = "60vw";
+        } else {
+            imgPanel4.style.left = "-10vw";
+            imgPanel4.style.width = "100vw";
+        }
+
+
+
+
+        indice5.classList.remove("active");
+
         imgPanel4.style.opacity = "1";
         textP4.style.opacity = "0.7";
         indice4.classList.add("active");
@@ -328,8 +366,7 @@ function swipe(e) {
     var div2y = $('#panel2').offset().top;
     var div3y = $('#panel3').offset().top,
         div4y = $('#panel4').offset().top,
-        div5y = $('#panel5').offset().top,
-        div6y = $('#panel6').offset().top;
+        div5y = $('#panel5').offset().top;
     // get window's current scroll position:
 
     var lastScrollTop = $(this).scrollTop();
@@ -370,9 +407,6 @@ function swipe(e) {
     } else if (lastScrollTop === div5y) {
         targetUp = $('#panel4');
         targetDown = $('#panel6');
-    } else if (lastScrollTop === div6y) {
-        targetUp = $('#panel5');
-        targetDown = $('#panel6');
     } else if (scrollDirection == "down" && lastScrollTop < div2y + 0 || lastScrollTop < div2y - 5) {
         targetUp = $('#panel1');
         targetDown = $('#panel2');
@@ -388,10 +422,7 @@ function swipe(e) {
     } else if (scrollDirection == "down" && lastScrollTop < div6y + 5 || lastScrollTop < div6y - 5) {
         targetUp = $('#panel5');
         targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 5) {
-        targetUp = $('#panel6');
-        targetDown = $('#panel6');
-    } // end else if
+    }
 
     // condition: determine which of targetUp or targetDown to scroll to, based on scrollDirection:
     if (scrollDirection === 'down') {

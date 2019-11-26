@@ -158,7 +158,7 @@ function update_menu() {
         imgPanel3.style.marginLeft = "-10vw";
         imgPanel3.style.opacity = "1";
         textP3.style.opacity = "1";
-        imgPanel3.style.marginTop = "-2vh";
+        imgPanel3.style.marginTop = "-1vh";
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");
@@ -169,7 +169,7 @@ function update_menu() {
 
         navbarSectionText.style.color = "black";
 
-       imgPanel2.style.marginLeft = "0";
+       imgPanel2.style.marginLeft = "-1vw";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
 

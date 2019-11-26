@@ -559,7 +559,8 @@ z-index: 250;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
     position: absolute;
-    background-color: white;
+    background-color: 	rgba(255,255,255, 0.9);
+;
     top: -4vh;
     left: 5vw;
     z-index: 2000;
@@ -618,7 +619,7 @@ transition: margin-left 2s, opacity 3s;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
     position: absolute;
-    background-color: white;
+    background-color: 	rgba(245,245,245, 0.9);
     top: -7vh;
     left: 30vw;
     z-index: 2000;
@@ -1218,6 +1219,7 @@ display: none;
         position: static;
         font-family: "Ma Super Fonte light", Verdana;
         font-size: 15px;
+
         margin-top: 20px;
         width: 100%;
 
