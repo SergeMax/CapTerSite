@@ -142,7 +142,7 @@ function update_menu() {
 
     if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
         navbarSectionText.style.color = "black";
-    } else if (scroll_Y + 200 > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
+    } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 5;
 
         navbarSectionText.style.color = "black";
@@ -166,7 +166,7 @@ function update_menu() {
         indice1.classList.remove("active");
 
 
-    } else if (scroll_Y +200 > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
+    } else if (scroll_Y  > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
         navbarSectionText.style.color = "black";
 
@@ -189,7 +189,7 @@ function update_menu() {
         indice3.classList.remove("active");
 
 
-    } else if (scroll_Y +200 > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
+    } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
         indexPanel = 3;
 
         navbarSectionText.style.color = "black";
@@ -202,7 +202,7 @@ function update_menu() {
         indice2.classList.remove("active");
 
 
-    } else if (scroll_Y+200 > hauteur_fenetre - hauteur_fenetre_Corrige) {
+    } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
         indexPanel = 2;
 
         navbarSectionText.style.color = "black";
