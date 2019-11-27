@@ -153,7 +153,7 @@ function update_menu() {
         indice1.classList.remove("active");
 
 
-    } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
+    } else if (scroll_Y  > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
         navbarSectionText.style.color = "black";
 
