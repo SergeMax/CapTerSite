@@ -725,13 +725,14 @@ z-index: 3500;
 
 #imgPanel4{
     position: absolute;
-    top: 0vh;
-    left: 90vw;
+    top: 10vh;
+    left: 70vw;
     width: 30vw;
     height: auto;
 z-index: 4000;
+    opacity: 0;
     object-fit: cover;
-    transition: left 12s, opacity 8s, width 12s;
+    transition: left 12s, opacity 8s, width 12s, top 10s;
 
 
 }
@@ -754,7 +755,7 @@ z-index: 4000;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
     position : absolute;
-    top: 22vh;
+    top: 25vh;
     left: 32vw;
     background-color: white;
     width: 35vw;
@@ -785,7 +786,7 @@ z-index: 5000;
 
 #imgPanel5-1{
     position: absolute;
-    top: 18vh;
+    top: 23vh;
     left: 0vw;
     width: 40vw;
     height: auto;
@@ -798,8 +799,8 @@ z-index: 5000;
 
 #imgPanel5-4{
     position: absolute;
-    top: 30vh;
-    left: 60vw;
+    top: 37vh;
+    left: 70vw;
     width: 40vw;
     height: auto;
 opacity: 0;
@@ -870,6 +871,7 @@ opacity: 0;
     cursor: pointer;
     opacity: 0.15;
 }
+
 
 #indicator > div.active {
     transform: scale(1.7);
@@ -1391,7 +1393,7 @@ left: 10vw;
 
     .divContenuPanel5 p {
 
-        top: 42vh;
+        top: 35vh;
         left: 20vw;
         width: 45vw;
         height: 15vh;

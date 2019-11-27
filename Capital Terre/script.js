@@ -19,18 +19,45 @@ var divIntro = document.getElementById("divIntro");
 var textCapital = document.getElementById("textCapitalsTerre");
 var textTerres = document.getElementById("textTerres");
 
+var imgPanel1 = document.getElementById("imgPanel1");
+var textP1 = document.getElementById("textP1");
+var textP2 = document.getElementById("textP2");
+var imgPanel2 = document.getElementById("imgPanel2");
+
+var textP3 = document.getElementById("textP3");
+var imgPanel3 = document.getElementById("imgPanel3");
+var textP4 = document.getElementById("textP4");
+var imgPanel4 = document.getElementById("imgPanel4");
+var indice1 = document.getElementById("indice1");
+var indice2 = document.getElementById("indice2");
+var indice3 = document.getElementById("indice3");
+var indice4 = document.getElementById("indice4");
+var indice5 = document.getElementById("indice5");
+var imgPanel51 = document.getElementById("imgPanel5-1");
+var imgPanel54 = document.getElementById("imgPanel5-4");
+var textP5 = document.getElementById("textP4");
+var trait1 = document.getElementById("trait1");
+var trait2 = document.getElementById("trait2");
+var indicator = document.getElementById("indicator");
 
 var indice = 0.01;
-
+var hauteur_pannel = (0.95 * window.innerHeight);
 
 var i;
+
+onglet[0].style.opacity = 1;
+onglet[0].style.borderTopColor = "rgb(255, 255, 255)";
+
 $(document).ready(function () {
+    indice1.classList.add("active");
+    setTimeout(function () {
 
     setInterval(function () {
         indice = indice + 0.02;
 
         divIntro.style.opacity = "" + (1 - indice);
     }, 10);
+    }, 200);
 
 
 
@@ -38,33 +65,25 @@ $(document).ready(function () {
         onglet[4].style.opacity = 1;
 
 
-    }, 0);
+    }, 400);
 
     setTimeout(function () {
 
         onglet[3].style.opacity = 1;
 
-    }, 400);
+    }, 800);
 
     setTimeout(function () {
         onglet[2].style.opacity = 1;
 
 
-    }, 800);
+    }, 1200);
 
     setTimeout(function () {
         onglet[1].style.opacity = 1;
 
 
-    }, 1200);
-    setTimeout(function () {
-        onglet[0].style.opacity = 1;
-
-
     }, 1600);
-
-
-
 
 
     setTimeout(function () {
@@ -80,44 +99,28 @@ $(document).ready(function () {
         //imgBandeOblique.classList.remove("paddingRightMaxT");
 
         imgBandeOblique.style.left = "-440px";
-
-
-
-
         textTerres.classList.remove("paddingLefttMax");
 
         setTimeout(function () {
             textTerres.style.paddingLeft = "10vw";
             imgBandeOblique.style.opacity = 0.8;
-
-
-
             logo1.style.opacity = 0.8;
             logo2.style.opacity = 0.8;
-
-
-
 
         }, 200);
     }, 10);
 
 
     setTimeout(function () {
-
-
-
         logo2.style.height = "1100px";
         logo2.style.top = "3%";
         logo2.style.left = "2%";
-
-
     }, 1000);
 
 
 
     setTimeout(function () {
         divIntro.style.display = "none";
-
         logo1.style.left = "2%";
         logo1.style.height = "1100px";
         logo1.style.top = "3%";
@@ -125,6 +128,12 @@ $(document).ready(function () {
 
     }, 2000);
 
+    setTimeout(function () {
+      indicator.style.opacity = "1";
+        trait1.style.opacity = "0.3";
+        trait2.style.opacity = "0.3";
+
+    }, 4000);
 
 });
 
@@ -139,9 +148,7 @@ function switchCase() {
                 scrollTop: $(this.panel1).offset().top
             }, 1500);
         }
-
         // scroll_to("#contenu");
-
     }
 }
 
@@ -150,7 +157,7 @@ function update_menu() {
     var scroll_Y = window.scrollY;
     var hauteur_fenetre = window.innerHeight;
     var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
-    var hauteur_pannel = (0.95 * window.innerHeight);
+     hauteur_pannel = (0.95 * window.innerHeight);
 
 
     var hauteur_menu = menu.offsetHeight;
@@ -179,38 +186,82 @@ function update_menu() {
     }
 
     if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
-        navbarSectionText.style.color = "black";
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = "black";
 
-        }
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
-        navbarSectionText.style.color = "black";
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = "black";
+        indexPanel = 5;
 
+        navbarSectionText.style.color = "black";
+        imgPanel51.style.opacity = "1";
+        imgPanel54.style.opacity = "1";
+
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            imgPanel54.style.left = "55vw";
+            imgPanel51.style.left = "8vw";
+
+        } else {
+            imgPanel54.style.left = "35vw";
+            imgPanel51.style.left = "8vw";
         }
 
+        textP5.style.opacity = "0.7";
+        indice5.classList.add("active");
+        indice4.classList.remove("active");
+        indice3.classList.remove("active");
+        indice2.classList.remove("active");
+        indice1.classList.remove("active");
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
+        indexPanel = 4;
         navbarSectionText.style.color = "black";
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = "black";
 
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            imgPanel4.style.left = "30vw";
+            imgPanel4.style.width = "60vw";
+            imgPanel4.style.top = "0vh";
+
+        } else {
+            imgPanel4.style.left = "-10vw";
+            imgPanel4.style.width = "100vw";
         }
+
+        indice5.classList.remove("active");
+        imgPanel4.style.opacity = "1";
+        textP4.style.opacity = "0.7";
+        indice4.classList.add("active");
+        indice3.classList.remove("active");
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
+
+        indexPanel = 3;
+
         navbarSectionText.style.color = "black";
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = "black";
-
-        }
-
+        imgPanel3.style.marginLeft = "-10vw";
+        imgPanel3.style.opacity = "1";
+        textP3.style.opacity = "1";
+        imgPanel3.style.marginTop = "-2vh";
+        indice4.classList.remove("active");
+        indice3.classList.add("active");
+        indice2.classList.remove("active");
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
+
+
+        indexPanel = 2;
+        trait1.style.backgroundColor = "rgba(0,0,0,0.5)";
+        trait2.style.backgroundColor = "rgba(0,0,0,0.5)";
+
+        navbarSectionText.style.color = "black";
+
+        imgPanel2.style.marginLeft = "-8vw";
+        imgPanel2.style.opacity = "1";
+        textP2.style.opacity = "1";
+
+        indice3.classList.remove("active");
+        indice2.classList.add("active");
+        indice1.classList.remove("active");
+
         navbarSectionText.style.color = "black";
         for (i = 0; i < a.length; i++) {
             a[i].style.color = "black";
-
         }
 
         // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0.4)";
@@ -224,7 +275,9 @@ function update_menu() {
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
-
+        indexPanel = 1;
+        indice1.classList.add("active");
+        indice2.classList.remove("active");
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "white";
         for (i = 0; i < a.length; i++) {
@@ -258,6 +311,9 @@ function load() {
 }
 
 //$(document).ready(load());
+
+
+
 
 window.addEventListener("scroll", update_menu);
 
@@ -295,7 +351,60 @@ $("#leftSidebar ul li a").click(function (e) {
 
 
 //--- START SCROLL EVENTS ---//
+
 // detect a mousewheel event (note: relies on jquery mousewheel plugin):
+
+
+
+indice1.onclick = function() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+    indice1.classList.add("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+
+}
+indice2.onclick = function() {
+    window.scrollTo({top: hauteur_pannel, behavior : "smooth"});
+    indice2.classList.add("active");
+    indice1.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+indice3.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*2, behavior : "smooth"});
+    indice3.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice4.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+indice4.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*3, behavior : "smooth"});
+    indice4.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice5.classList.remove("active");
+
+}
+
+
+indice5.onclick = function() {
+    window.scrollTo({top: hauteur_pannel*4, behavior : "smooth"});
+    indice5.classList.add("active");
+    indice1.classList.remove("active");
+    indice2.classList.remove("active");
+    indice3.classList.remove("active");
+    indice4.classList.remove("active");
+
+}
+
 
 window.addEventListener("mousewheel", swipe);
 
@@ -308,8 +417,7 @@ function swipe(e) {
     var div2y = $('#panel2').offset().top;
     var div3y = $('#panel3').offset().top,
         div4y = $('#panel4').offset().top,
-        div5y = $('#panel5').offset().top,
-        div6y = $('#panel6').offset().top;
+        div5y = $('#panel5').offset().top;
     // get window's current scroll position:
 
     var lastScrollTop = $(this).scrollTop();
@@ -350,9 +458,9 @@ function swipe(e) {
     } else if (lastScrollTop === div5y) {
         targetUp = $('#panel4');
         targetDown = $('#panel6');
-    } else if (lastScrollTop === div6y) {
+    /*} else if (lastScrollTop === div6y) {
         targetUp = $('#panel5');
-        targetDown = $('#panel6');
+        targetDown = $('#panel6');*/
     } else if (scrollDirection == "down" && lastScrollTop < div2y + 50 || lastScrollTop < div2y - 50) {
         targetUp = $('#panel1');
         targetDown = $('#panel2');
@@ -365,13 +473,13 @@ function swipe(e) {
     } else if (scrollDirection == "down" && lastScrollTop < div5y + 50 || lastScrollTop < div5y - 50) {
         targetUp = $('#panel4');
         targetDown = $('#panel5');
-    } else if (scrollDirection == "down" && lastScrollTop < div6y + 50 || lastScrollTop < div6y - 50) {
-        targetUp = $('#panel5');
-        targetDown = $('#panel6');
-    } else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 50) {
-        targetUp = $('#panel6');
-        targetDown = $('#panel6');
-    } // end else if
+    } //else if (scrollDirection == "down" && lastScrollTop < div6y + 50 || lastScrollTop < div6y - 50) {
+        //targetUp = $('#panel5');
+       // targetDown = $('#panel6');
+    //} /*else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 50) {
+      //  targetUp = $('#panel6');
+        //targetDown = $('#panel6');
+   // } */// end else if
 
     // condition: determine which of targetUp or targetDown to scroll to, based on scrollDirection:
     if (scrollDirection === 'down') {

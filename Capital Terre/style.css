@@ -562,30 +562,228 @@ z-index: 250;
 
     opacity: 0.4;
 }
+#panel5 {
+    height: 100vh;
+}
+
 .divContenuPanel2{
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 35%;
+    top: 25%;
     left: 10%;
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 
 .divContenuPanel2 > p{
-font-family: "Ma Super Fonte light", Verdana;
+    position: absolute;
+    top : 15%;
+    left: 5%;
+    width: 25%;
+    height: 40vh;
+    background-color: white;
+    padding: 50px;
+    font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
+    transition: opacity 2s;
+    text-align: justify;
+    z-index: 6000;
+
+
 
 }
 
 
 #imgPanel2{
-    width: 50%;
+    position: absolute;
+    top : -5vh;
+    left: 40%;
+    width: 70%;
     height: auto;
-    margin-right: 10vw;
+    opacity: 0;
+    margin-left: 5vw;
+    opacity: 0;
     object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+}
+
+#textP2{
+    opacity: 0;
+}
+
+
+.divContenuPanel3{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel3 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgba(245,245,245, 0.9);
+    top: -7vh;
+    left: 30vw;
+    z-index: 2000;
+    width: 40vw;
+    height: 50vh;
+    padding: 80px;
+    text-align: justify;
+    transition: margin-left 2s, opacity 2s;
 
 }
+
+#textP3{
+    opacity: 0;
+}
+
+#imgPanel3{
+
+    position: absolute;
+    top : 0%;
+    left: -10vw;
+
+    opacity: 0;
+
+    width: 90%;
+    height: 80vh;
+    margin-left: -14vw;
+    margin-top: -3vh;
+    object-fit: cover;
+    transition: margin-left 2s, opacity 4s, margin-top 2s;
+
+
+}
+
+
+.divContenuPanel4{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 9vw;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel4 > p{
+    position: absolute;
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    top: -1vh;
+    left: 0vw;
+    background-color: whitesmoke;
+
+    width: 38vw;
+    height: 45vh;
+    padding: 50px;
+
+    z-index: 3500;
+    color: black;
+
+    text-align: justify;
+    transition: margin-left 2s, opacity 2s;
+
+}
+#textP4{
+    opacity: 0;
+}
+
+
+#imgPanel4{
+    position: absolute;
+    top: 10vh;
+    left: 70vw;
+    width: 30vw;
+    height: auto;
+    z-index: 4000;
+    opacity: 0;
+    object-fit: cover;
+    transition: left 12s, opacity 8s, width 12s, top 10s;
+
+
+}
+
+.divContenuPanel5{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+
+
+.divContenuPanel5 p {
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    position : absolute;
+    top: 25vh;
+    left: 32vw;
+    background-color: white;
+    width: 35vw;
+    height: 20vh;
+    padding: 30px;
+    color: black;
+    text-align: justify;
+    z-index: 6000;
+    transition: margin-left 2s, opacity 2s;
+
+}
+#textP5{
+    opacity: 1;
+}
+
+
+#imgPanel5{
+    position: absolute;
+    top: 19vh;
+    left: 5vw;
+    width: 70vw;
+    height: auto;
+    z-index: 5000;
+    object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+}
+
+
+#imgPanel5-1{
+    position: absolute;
+    top: 23vh;
+    left: 0vw;
+    width: 40vw;
+    height: auto;
+    z-index: 5000;
+    opacity: 0;
+    object-fit: cover;
+    transition: left 2s, opacity 4s;
+}
+
+
+#imgPanel5-4{
+    position: absolute;
+    top: 37vh;
+    left: 70vw;
+    width: 40vw;
+    height: auto;
+    opacity: 0;
+    z-index: 5001;
+    object-fit: cover;
+    transition: left 2s, opacity 4s;
+}
+
+
+
 #sidePanelButton {
     position: fixed;
     top: 0;
@@ -616,7 +814,71 @@ font-family: "Ma Super Fonte light", Verdana;
     left: 0; /* move the sidePanel into the viewport when you click the button */
 }
 
+/*////////////////////////////////////////////////////////////////////*/
 
+#indicator {
+    position: absolute;
+    top: -10vh;
+    left: 58px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 4000;
+    opacity: 0;
+    transition: opacity 3s;
+
+}
+
+#indicator > div {
+    background-color: white;
+    width:5px;
+    height:5px;
+    border-radius: 5px;
+    margin: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 3s;
+
+}
+
+#indicator > div.active {
+    transform: scale(1.7);
+}
+
+.indicatorWhite{
+opacity: 0;
+}
+
+#trait1{
+    width: 1px;
+    height: 50vh;
+    position: fixed;
+    bottom: 80vh;
+    left: 80px;
+    background: white;
+    opacity: 0;
+    z-index: 4000;
+    transition: opacity 3s;
+
+}
+
+#trait2{
+    width: 1px;
+    height:25vh;
+    position: fixed;
+    top: 70vh;
+    left: 80px;
+    background: white;
+    opacity: 0;
+    z-index: 4000;
+    transition: opacity 3s;
+
+
+}
+
+/*//////////////////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 1240px) {
 

@@ -57,11 +57,6 @@ onglet[1].style.borderTopColor = "rgb(0, 0, 0)";
 
 
 
-
-
-
-
-
 $(document).ready(function () {
     indice1.classList.add("active");
 
@@ -74,15 +69,11 @@ $(document).ready(function () {
 
     }, 200);
 
-
-
         setTimeout(function () {
             onglet[4].style.opacity = 1;
             imgPanel1.style.marginLeft = "0";
             imgPanel1.style.opacity = "1";
             textP1.style.opacity = "1";
-
-
         }, 400);
 
     setTimeout(function () {
@@ -99,13 +90,9 @@ $(document).ready(function () {
         onglet[0].style.opacity = 1;
     }, 1600);
 
-
-
     setTimeout(function () {
         imgPetitLogoNav.style.transition = "opacity 4s";
     }, 500);
-
-
 
     setTimeout(function () {
         divIntro.style.display = "none";
@@ -173,6 +160,8 @@ function update_menu() {
         if (window.matchMedia("(min-width: 700px)").matches) {
             imgPanel4.style.left = "30vw";
             imgPanel4.style.width = "60vw";
+            imgPanel4.style.top = "0vh";
+
         } else {
             imgPanel4.style.left = "-10vw";
             imgPanel4.style.width = "100vw";
