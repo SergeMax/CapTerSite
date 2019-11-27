@@ -40,10 +40,11 @@ var trait1 = document.getElementById("trait1");
 var trait2 = document.getElementById("trait2");
 var indicator = document.getElementById("indicator");
 
+
 var indice = 0.01;
 var hauteur_pannel = (0.95 * window.innerHeight);
 
-var i;
+
 
 onglet[0].style.opacity = 1;
 onglet[0].style.borderTopColor = "rgb(255, 255, 255)";
@@ -210,6 +211,18 @@ function update_menu() {
         indice2.classList.remove("active");
         indice1.classList.remove("active");
 
+        indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice2.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice5.style.backgroundColor =  "rgba(0,0,0, 0)";
+        indice3.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice4.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+
+        }
+
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
         navbarSectionText.style.color = "black";
@@ -230,6 +243,19 @@ function update_menu() {
         indice4.classList.add("active");
         indice3.classList.remove("active");
 
+        indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice5.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice4.style.backgroundColor =  "rgba(0,0,0, 0)";
+        indice3.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice2.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+
+        }
+
+
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
 
         indexPanel = 3;
@@ -242,6 +268,21 @@ function update_menu() {
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");
+
+
+        indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice5.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice3.style.backgroundColor =  "rgba(0,0,0, 0)";
+        indice2.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice4.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+
+        }
+
+
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
 
 
@@ -258,9 +299,21 @@ function update_menu() {
         indice3.classList.remove("active");
         indice2.classList.add("active");
         indice1.classList.remove("active");
+        indice1.classList.remove("active2");
+        indice3.classList.remove("active");
+        indice4.classList.remove("active");
+
+        indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice5.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice2.style.backgroundColor =  "rgba(0,0,0, 0)";
+        indice3.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+        indice4.style.backgroundColor =  "rgba(0,0,0, 0.15)";
+
+
+
 
         navbarSectionText.style.color = "black";
-        for (i = 0; i < a.length; i++) {
+        for (var i = 0; i < a.length; i++) {
             a[i].style.color = "black";
         }
 
@@ -268,25 +321,48 @@ function update_menu() {
         imgPetitLogoNav.style.transition = "opacity 2s";
         imgBurger.style.transition = "opacity 2s";
 
-        for (i = 0; i < onglet.length; i++) {
-            onglet[i].classList.add("ongletSurFondBlanc");
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+
         }
+        onglet[0].style.borderTopColor = "black";
+
+
+
+
         imgBurger.style.opacity = 0.1;
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
         indexPanel = 1;
-        indice1.classList.add("active");
+        onglet[0].style.borderTopColor = "white";
+
+        indice1.style.backgroundColor =  "rgba(255,255,255, 1)";
+
+        indice2.style.backgroundColor =  "rgba(255,255,255, 0.5)";
+        indice3.style.backgroundColor =  "rgba(255,255,255, 0.5)";
+        indice4.style.backgroundColor =  "rgba(255,255,255, 0.5)";
+
+        indice5.style.backgroundColor =  "rgba(255,255,255, 0.5)";
+
+        trait1.style.backgroundColor = "rgba(255,255,255,0.8)";
+        trait2.style.backgroundColor = "rgba(255,255,255,0.8)";
+
+        indice1.classList.add("active2");
         indice2.classList.remove("active");
+        indice3.classList.remove("active");
+        indice4.classList.remove("active");
+
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "white";
-        for (i = 0; i < a.length; i++) {
+        for (var i = 0; i < a.length; i++) {
             a[i].style.color = "white";
 
         }
         // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0)";
 
-        for (i = 0; i < onglet.length; i++) {
+        for (var i = 0; i < onglet.length; i++) {
             onglet[i].classList.remove("ongletSurFondBlanc");
         }
 

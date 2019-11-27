@@ -169,40 +169,13 @@ function update_menu() {
 
         navbarSectionText.style.color = "black";
 
-       imgPanel2.style.marginLeft = "-1vw";
+        imgPanel2.style.marginLeft = "-1vw";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
 
         indice3.classList.remove("active");
         indice2.classList.add("active");
         indice1.classList.remove("active");
-
-
-
-
-
-       /* #imgPanel1{
-            width: 40%;
-            height: auto;
-            margin-right: 10vw;
-            object-fit: cover;
-
-        }
-
-        #imgPanel1Mob{
-            width: 40%;
-            height: auto;
-            margin-right: 10vw;
-            object-fit: cover;
-
-        }*/
-
-
-        // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0.4)";
-
-       /* for (i = 0; i < onglet.length; i++) {
-            onglet[i].classList.add("ongletSurFondBlanc");
-        }*/
 
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
