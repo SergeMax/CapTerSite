@@ -50,7 +50,8 @@ onglet[0].style.opacity = 1;
 onglet[0].style.borderTopColor = "rgb(255, 255, 255)";
 
 $(document).ready(function () {
-    indice1.classList.add("active");
+    indice1.classList.add("active2");
+    update_menu();
     setTimeout(function () {
 
     setInterval(function () {
@@ -138,20 +139,6 @@ $(document).ready(function () {
 
 });
 
-function switchCase() {
-    var scroll_Y = window.scrollY;
-    var hauteur_fenetre = window.innerHeight;
-    var hauteur_fenetre_Corrige = (0.25 * window.innerHeight);
-
-    if (scroll_Y > 100) {
-        function scroll_to(contenu) {
-            $('html, body').animate({
-                scrollTop: $(this.panel1).offset().top
-            }, 1500);
-        }
-        // scroll_to("#contenu");
-    }
-}
 
 function update_menu() {
 
@@ -164,10 +151,7 @@ function update_menu() {
     var hauteur_menu = menu.offsetHeight;
 
     divTextLeDomaine.style.opacity = "" + (1 - (scroll_Y - 50) / 200);
-    // divPhraseTop.style.opacity = ""+ (1 - (scroll_Y-50)/100);
-    //  divPhraseTop.style.opacity = ""+ (1 - (scroll_Y-50)/100);
     divLogoNav.style.opacity = "" + (1 - (scroll_Y - 200) / 300);
-    //divVideo.style.opacity = ""+ ((1 - (scroll_Y-500)/200)-0.3);
     panel1.style.opacity = "" + (0 + (scroll_Y) / hauteur_pannel - 0.01);
     panel2.style.opacity = "" + (0.4 + (scroll_Y) / hauteur_pannel - 0.01);
 
@@ -177,20 +161,17 @@ function update_menu() {
     if (scroll_Y > 50) {
         fleche.style.opacity = 0;
         navbarSectionText.classList.add("displaynone");
-
     }
 
     if (scroll_Y > 500) {
         fleche.style.opacity = 0;
         navbarSectionText.classList.add("displaynone");
-
     }
 
     if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 5;
-
         navbarSectionText.style.color = "black";
         imgPanel51.style.opacity = "1";
         imgPanel54.style.opacity = "1";
@@ -209,7 +190,13 @@ function update_menu() {
         indice4.classList.remove("active");
         indice3.classList.remove("active");
         indice2.classList.remove("active");
-        indice1.classList.remove("active");
+        indice1.classList.remove("active2");
+        onglet[0].style.borderTopColor = "black";
+
+        navbarSectionText.style.color = "black";
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.color = "black";
+        }
 
         indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
         indice2.style.backgroundColor =  "rgba(0,0,0, 0.15)";
@@ -242,6 +229,13 @@ function update_menu() {
         textP4.style.opacity = "0.7";
         indice4.classList.add("active");
         indice3.classList.remove("active");
+        indice1.classList.remove("active2");
+        onglet[0].style.borderTopColor = "black";
+
+        navbarSectionText.style.color = "black";
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.color = "black";
+        }
 
         indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
         indice5.style.backgroundColor =  "rgba(0,0,0, 0.15)";
@@ -268,7 +262,13 @@ function update_menu() {
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");
+        indice1.classList.remove("active2");
+        onglet[0].style.borderTopColor = "black";
 
+        navbarSectionText.style.color = "black";
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.color = "black";
+        }
 
         indice1.style.backgroundColor =  "rgba(0,0,0, 0.15)";
         indice5.style.backgroundColor =  "rgba(0,0,0, 0.15)";
@@ -279,7 +279,6 @@ function update_menu() {
         for (var i = 0; i < onglet.length; i++) {
             onglet[i].classList.add("ongletSurFondBlanc");
             onglet[i].classList.remove("ongletSurFondGris");
-
         }
 
 
@@ -328,14 +327,18 @@ function update_menu() {
         }
         onglet[0].style.borderTopColor = "black";
 
-
-
-
         imgBurger.style.opacity = 0.1;
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
         indexPanel = 1;
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+
+        }
+
         onglet[0].style.borderTopColor = "white";
 
         indice1.style.backgroundColor =  "rgba(255,255,255, 1)";
