@@ -99,7 +99,7 @@ video {
     display: flex;
     justify-content: flex-end;
     margin-top: 5vh;
-    position: fixed;
+    position: absolute;
     z-index: 2000;
 
 
@@ -232,21 +232,11 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     padding-top: 3px;
     border-top: solid 2px;
     border-top-color: rgb(0, 0, 0);
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(245,245,245,1);
     transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
 }
 
-.ongletSurFondGris:hover{
-    background-color: rgba(255,255,255,1);
-    border-top-color:rgba(0,0,0,1);
 
-}
-
-.ongletSurFondBlanc:hover{
-    background-color: rgba(245,245,245,1);
-    border-top-color:rgba(0,0,0,1);
-
-}
 
 
 #divLogoNav {
@@ -853,6 +843,7 @@ opacity: 0;
 
 #textTitreMob {
     display: none;
+    position: absolute;
 }
 /*////////////////////////////////////////////////////////////////////*/
 
@@ -925,13 +916,33 @@ opacity: 0;
 
 }
 
+#map{
+
+    width: 40vw;
+    height: 60vh;
+    margin: 5vw;
+    margin-top: 30vh;
+    margin-left: 5vw;
+
+}
+
 /*//////////////////////////////////////////////////////////////////*/
 body{
-    height: 120vh;
+    height: 100%;
+}
+
+#colonne{
+    display: flex;
+    flex-direction: row;
 }
 
 .container{
-    margin-left: 45vw;
+    margin-right: 5vw;
+    margin-left: 3vw;
+margin-top: -3vh;
+    height: 100vh;
+    width: 50%;
+
 }
 
 h1 {
@@ -966,7 +977,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 .styled-input {
     float: left;
-    width: 293px;
+    width: 100%;
     margin: 1rem 0;
     position: relative;
     border-radius: 4px;
@@ -990,7 +1001,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .styled-input.wide {
-    width: 650px;
+    width: 50vw;
     max-width: 100%;
 }
 
@@ -999,10 +1010,12 @@ textarea {
     font-family: "Ma Super Fonte light", Arial;
     padding: 20px;
     border: 0;
-    width: 100%;
+    width: 50vw;
     font-size: 1rem;
     background-color: #f5f5f5;
     color: black;
+    max-width: 100%;
+
     border-radius: 4px;
 }
 
@@ -1022,7 +1035,7 @@ textarea:focus ~ span {
 
 textarea {
     width: 100%;
-    min-height: 15em;
+    min-height: 10em;
 }
 
 .input-container {
@@ -1032,7 +1045,7 @@ textarea {
 }
 
 .submit-btn {
-    float: right;
+    margin-right: 20vw;
     padding: 7px 35px;
     margin-bottom: 50px;
     border-radius: 60px;
@@ -1114,6 +1127,12 @@ input[type=checkbox]:checked + label {
         width: 1px;
         left: 40px;
     }
+
+
+    .container{
+        margin-left: -1vw;
+    }
+
 
     #sectionPlacement {
         width: 130%;
@@ -1249,6 +1268,69 @@ input[type=checkbox]:checked + label {
 
 @media screen and (max-width: 700px) {
 
+
+
+    h1 {
+        padding: 0;
+padding-left: 6vw;
+        padding-right: 6vw;
+font-size: 40px;
+        margin-top: -5vh;
+        margin-left: -5vw;
+
+    }
+
+    h4{
+        margin-left: -5vw;
+
+    }
+
+
+    #map{
+        width: 90vw;
+        height: 50vh;
+        margin: 5vw;
+        padding-right: 8vw;
+
+    }
+
+    input,
+    textarea {
+        font-family: "Ma Super Fonte light", Arial;
+        padding: 20px;
+        border: 0;
+        width: 83vw;
+        font-size: 1rem;
+        background-color: #f5f5f5;
+        color: black;
+        border-radius: 4px;
+    }
+
+    textarea {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .styled-input.wide {
+        width: 83vw;
+        max-width: 100%;
+    }
+
+    .container{
+        margin-right: 5vw;
+        margin-left: 3vw;
+        margin-top: 10vh;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+
+    #colonne{
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+    }
 
     #trait1 {
         width: 1px;
@@ -1415,7 +1497,7 @@ input[type=checkbox]:checked + label {
 
     #textTitreMob{
 display: block;
-        position: fixed;
+        position: absolute;
         top: 6vh;
         left: 40vw;
 

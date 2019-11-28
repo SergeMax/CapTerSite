@@ -809,6 +809,7 @@ z-index: 250;
 
 #textTitreMob {
     display: none;
+    position: absolute;
 }
 
 /*////////////////////////////////////////////////////////////////////*/
