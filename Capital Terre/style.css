@@ -807,6 +807,10 @@ z-index: 250;
     left: 0; /* move the sidePanel into the viewport when you click the button */
 }
 
+#textTitreMob {
+    display: none;
+}
+
 /*////////////////////////////////////////////////////////////////////*/
 
 #indicator {
@@ -1041,6 +1045,23 @@ z-index: 250;
 }
 
 @media screen and (max-width: 700px) {
+
+
+    #textTitreMob{
+        display: none;
+        position: fixed;
+        top: 6vh;
+        left: 40vw;
+
+        font-family: "Ma Super Fonte medium", Verdana;
+        border-top: solid 1px;
+        border-top-color:rgba(0,0,0,1);
+        font-size: 20px;
+        z-index: 400;
+
+
+    }
+
 
 
     #sectionPlacement {
@@ -1473,9 +1494,9 @@ z-index: 250;
 }
 
 @media screen and (max-width: 500px) {
-    div {
+  /*  div {
         width: 70%;
-    }
+    }*/
 }
 
 @media screen and (max-device-width: 800px) {

@@ -39,6 +39,10 @@ var textP5 = document.getElementById("textP4");
 var trait1 = document.getElementById("trait1");
 var trait2 = document.getElementById("trait2");
 var indicator = document.getElementById("indicator");
+var textTitreMob = document.getElementById("textTitreMob");
+
+
+
 
 
 var indice = 0.01;
@@ -209,6 +213,7 @@ function update_menu() {
             onglet[i].classList.remove("ongletSurFondGris");
 
         }
+        textTitreMob.style.display = "block";
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
@@ -248,6 +253,7 @@ function update_menu() {
             onglet[i].classList.add("ongletSurFondGris");
 
         }
+        textTitreMob.style.display = "block";
 
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
@@ -280,6 +286,7 @@ function update_menu() {
             onglet[i].classList.add("ongletSurFondBlanc");
             onglet[i].classList.remove("ongletSurFondGris");
         }
+        textTitreMob.style.display = "block";
 
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
@@ -329,9 +336,15 @@ function update_menu() {
 
         imgBurger.style.opacity = 0.1;
         imgPetitLogoNav.style.opacity = 0.7;
+
+        textTitreMob.style.display = "block";
+
+
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
     } else {
         indexPanel = 1;
+
+        textTitreMob.style.display = "none";
 
         for (var i = 0; i < onglet.length; i++) {
             onglet[i].classList.remove("ongletSurFondBlanc");

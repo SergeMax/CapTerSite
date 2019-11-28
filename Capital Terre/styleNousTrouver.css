@@ -1,0 +1,1634 @@
+@font-face {
+    font-family: "Ma Super Fonte medium";
+    src: url('Asset/font/Futura/Vfutura-Medium.otf');
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: "Ma Super Fonte light";
+    font-weight: 300;
+    src: url('Asset/font/Futura/Vfutura-Light.otf');
+
+}
+
+@font-face {
+    font-family: "Ma Super Fonte heavy";
+    font-weight: 600;
+    src: url('Asset/font/Futura/Vfutura-Heavy.otf');
+}
+
+@font-face {
+    font-family: "Ma Super Fonte bold";
+    font-weight: bold;
+    src: url('Asset/font/Futura/Vfutura-Bold.otf');
+}
+
+@font-face {
+    font-family: "Astloch normal";
+    src: url('Asset/font/Astloch/Astloch-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Astloch bold";
+    font-weight: bold;
+    src: url('Asset/font/Astloch/Astloch-Bold.ttf');
+}
+
+body {
+    font-family: "Ma Super Fonte", Helvetica, Arial, sans-serif;
+    height: 400VH;
+    scroll-behavior: inherit;
+
+}
+
+a:link
+{
+    text-decoration:none;
+    color: black;
+}
+
+a
+{
+    text-decoration:none;
+    color: black;
+}
+
+
+#divHeaderFixe {
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+
+}
+
+
+video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+      background-size: cover;*/
+    transition: 0.1s opacity;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+.videoTop {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+
+#navbar {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5vh;
+    position: fixed;
+    z-index: 2000;
+
+
+}
+
+#divIntro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 300;
+
+}
+
+#imgPetitLogoNav{
+    position: absolute;
+width: 5vw;
+    height: auto;
+    margin-top: 10px;
+    right: 65vw;
+    opacity: 0;
+    transition: opacity 2s;
+
+}
+
+#imgBandeOblique{
+    position: absolute;
+    width: auto;
+    height: 120vh;
+    margin-top: 0;
+    left: 40vw;
+    opacity: 0.1;
+    transition: opacity 0.1s;
+
+}
+#logo1{
+position: absolute;
+    top: 60%;
+    right: 5%;
+    left:-5%;
+
+    max-width: auto;
+    /*  height: 1000px;*/
+    height: 1vh;
+    opacity: 0;
+
+    margin-top: 0;
+transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
+    z-index: 500;
+
+}
+
+#logo2{
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    left:-5%;
+
+    max-width: auto;
+    /*  height: 1000px;*/
+    height: 1vh;
+    opacity: 0;
+
+    margin-top: 0;
+    transition: opacity 4s, left 2.5s, height 2s, top 2s;
+    z-index: 500;
+
+}
+
+#imgBurger{display: none;}
+
+#sectionNav {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    margin-left: 40vw;
+    margin-right: 5vw;
+
+
+}
+
+
+#sectionPlacement {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-direction: row;
+    justify-content: space-around;
+    /* justify-content: flex-start;*/
+    margin-right: 0vh;
+    color: black;
+    font-size: 25px;
+    font-family: "Ma Super Fonte medium", Helvetica, Arial, sans-serif;
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(255,255,255,0);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.onglet{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top: solid 2px;
+    border-top-color:rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
+    height: 40px;
+    opacity: 0;
+    transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
+    white-space: nowrap;
+
+
+}
+
+
+.onglet:hover{
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 3px;
+    border-top: solid 2px;
+    border-top-color: rgb(0, 0, 0);
+    background-color: rgba(255,255,255,1);
+    transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
+}
+
+.ongletSurFondGris:hover{
+    background-color: rgba(255,255,255,1);
+    border-top-color:rgba(0,0,0,1);
+
+}
+
+.ongletSurFondBlanc:hover{
+    background-color: rgba(245,245,245,1);
+    border-top-color:rgba(0,0,0,1);
+
+}
+
+
+#divLogoNav {
+    width: 40%;
+    left: 0px;
+    min-width: 500px;
+    transition: opacity 0.3s;
+    height: 100%;
+
+}
+
+#imgLogoNav {
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    left:-55%;
+
+    max-width: auto;
+  /*  height: 1000px;*/
+    height: 120vh;
+    opacity: 0;
+
+    margin-top: 0;
+    transition: opacity 4s, left 2s, height 2s;
+    z-index: 400;
+
+}
+
+
+#divTextCapitalsTerre {
+    position: absolute;
+    width: 100%;
+
+    height: 300px;
+    top: 44%;
+    left: 0;
+    transition: opacity 0.1s;
+    background-color: rgba(255,255,255,0.055);
+    padding-left: 51vw;
+   /* margin-top: -2vh;*/
+   /* padding-bottom: 1px;
+    padding-top: 1px 0;
+*/
+}
+
+#textCapitalsTerre{
+
+    /*font-family: 'Overpass', sans-serif;*/
+   /*font-family: 'Cormorant Garamond', serif;*/
+    font-family: 'Playfair Display', serif;
+    /* font-family: "Ma Super Fonte light";*/
+    /*position: relative;*/
+    font-weight: 400;
+   /* top:-100%;
+    left: 0;*/
+    margin-top: 0px;
+    font-size: 7em;
+    color: white;
+    opacity: 0;
+    letter-spacing: 0px;
+   /* text-shadow:  2px 8px 3px rgba(0,0,0,0.1),
+    0px -5px 35px rgba(255,255,255,0.5);*/
+    transition: opacity 3s, letter-spacing 1s, padding-left 2s, font-size 1s;
+
+}
+
+
+#textTerres{
+   /* font-family: 'Cormorant Garamond', serif;*/
+    font-family: 'Playfair Display', serif;
+
+   /* font-family: 'Overpass', sans-serif;*/
+    /* font-family: "Ma Super Fonte light";*/
+    position: relative;
+    font-weight: 400;
+    top: 0;
+    left: 0;
+    font-size: 7em;
+    color: white;
+    opacity: 0;
+    letter-spacing: 0px;
+
+    padding-left: 40vw;
+    margin-top: 0vh;
+    transition: opacity 3s, letter-spacing 1s, padding-left 2s, font-size 1s;
+
+}
+
+.paddingLefttMax{
+    padding-left: 20vw;
+}
+.paddingLefttMaxT{
+ right: -40%;
+    visibility: hidden;
+}
+
+
+#phraseTop {
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    font-family: "Ma Super Fonte light", Helvetica, Arial, sans-serif;
+    letter-spacing: 7px;
+
+    top: 64%;
+    left: 60%;
+    transition: opacity 0.1s;
+
+}
+
+#contenu {
+
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    top: 95vh;
+    background-color: #f5f5f5;
+    z-index: 101;
+    opacity: 0.2;
+
+}
+
+/*/////    FLECHE QUI CLIGNOTTE   ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.fleche a {
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: black;
+    font-family: "Ma Super Fonte light", Helvetica, Arial, sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.flech a:hover {
+    opacity: .5;
+}
+
+
+#section05 a {
+    padding-top: 70px;
+}
+#section05 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+
+
+.fleche{
+    position: absolute;
+    top: 98vh;
+    left: 48%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    z-index: 300;
+}
+.fleche a:hover {
+    opacity: .5;
+}
+
+#imgPanel1Mob{
+    display: none;
+}
+
+    /*transition: opacity 0.3s;*/
+
+
+
+
+
+
+/*/////  FIN  FLECHE QUI CLIGNOTTE   ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+* {
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#leftSidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; /* needs to stay on top of the mainStack AND the sidePanel */
+    /* for demo only: */
+    min-width: 250px;
+    border-right: 1px solid #000;
+    background-color: rgba(255,255,255,0.5);
+}
+#leftSidebar > ul {
+    /* all of these are for demo only: */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#leftSidebar > ul > li {
+    /* all of these are for demo only: */
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #999;
+}
+#panel1, #panel2, #panel3, #panel4, #panel5, #panel6 {
+
+position: relative;
+    /* all of these are for demo only: */
+    width: 100%;
+    height: 95vh;
+    /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+z-index: 250;
+}
+
+.panel{
+    overflow: hidden;
+}
+
+#panel1, #panel3, #panel5 {
+    /* for demo only: */
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+#panel1{
+    opacity: 1;
+
+}
+
+#panel2, #panel4, #panel6 {
+    /* for demo only: */
+    background-color: white;
+    opacity: 1;
+}
+
+#panel2{
+   /* -webkit-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+    box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);*/
+
+    opacity: 1;
+}
+
+#panel3 {
+    height: 100vh;
+}
+
+.divContenuPanel1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel1 > p{
+    position: absolute;
+    top : 10%;
+    left: 50%;
+    opacity: 0;
+
+
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    margin-top: 2%;
+    text-align: justify;
+    background-color: rgba(255,255,255, 0.7);
+    padding: 50px;
+    /*background-color: white;*/
+   /* padding: 50px;*/
+    height: 32vh;
+    transition: opacity 2s;
+
+}
+
+#textP1{
+    opacity: 0;
+}
+
+
+#imgPanel1{
+
+    width: 60%;
+    height: auto;
+    margin-right: 10vw;
+    margin-left: -5vw;
+    opacity: 0;
+    object-fit: cover;
+transition: margin-left 1s, opacity 2s;
+}
+
+#imgPanel1Mob{
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+    object-fit: cover;
+
+}
+
+
+.divContenuPanel2{
+     display: flex;
+     flex-direction: row;
+     position: relative;
+     top: 25%;
+     left: 10%;
+     width: 90%;
+     height: auto;
+ }
+
+.divContenuPanel2 > p{
+position: absolute;
+    top : 25%;
+    left: -2%;
+    width: 25%;
+    height: 40%;
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+transition: opacity 2s;
+    text-align: justify;
+
+
+
+}
+
+
+#imgPanel2{
+    position: absolute;
+    top : 20%;
+    left: 30%;
+    width: 70%;
+    height: auto;
+    opacity: 0;
+    margin-left: 5vw;
+opacity: 0;
+    object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+}
+
+#textP2{
+    opacity: 0;
+}
+
+
+.divContenuPanel3{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel3 > p{
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    position: absolute;
+    background-color: white;
+    top: -7vh;
+    left: 30vw;
+z-index: 2000;
+    width: 40vw;
+    height: 50vh;
+    padding: 80px;
+    text-align: justify;
+    transition: margin-left 2s, opacity 2s;
+
+}
+
+#textP3{
+    opacity: 0;
+}
+
+#imgPanel3{
+
+    position: absolute;
+    top : 0%;
+    left: 0%;
+
+opacity: 0;
+
+    width: 90%;
+    height: 80vh;
+    margin-left: -14vw;
+    margin-top: -3vh;
+    object-fit: cover;
+    transition: margin-left 2s, opacity 4s, margin-top 2s;
+
+
+}
+
+
+.divContenuPanel4{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 26%;
+    left: 9vw;
+    width: 80%;
+    height: auto;
+}
+
+.divContenuPanel4 > p{
+    position: absolute;
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    top: -1vh;
+    left: 0vw;
+    background-color: whitesmoke;
+
+    width: 38vw;
+    height: 45vh;
+    padding: 50px;
+
+z-index: 3500;
+    color: black;
+
+    text-align: justify;
+    transition: margin-left 2s, opacity 2s;
+
+}
+#textP4{
+    opacity: 0;
+}
+
+
+#imgPanel4{
+    position: absolute;
+    top: 10vh;
+    left: 70vw;
+    width: 30vw;
+    height: auto;
+z-index: 4000;
+    opacity: 0;
+    object-fit: cover;
+    transition: left 12s, opacity 8s, width 12s, top 10s;
+
+
+}
+
+.divContenuPanel5{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+
+
+.divContenuPanel5 p {
+    font-family: "Ma Super Fonte light", Verdana;
+    font-size: 20px;
+    position : absolute;
+    top: 25vh;
+    left: 32vw;
+    background-color: white;
+    width: 35vw;
+    height: 20vh;
+    padding: 30px;
+    color: black;
+    text-align: justify;
+    z-index: 6000;
+    transition: margin-left 2s, opacity 2s;
+
+}
+#textP5{
+    opacity: 1;
+}
+
+
+#imgPanel5{
+    position: absolute;
+    top: 19vh;
+    left: 5vw;
+    width: 70vw;
+    height: auto;
+z-index: 5000;
+    object-fit: cover;
+    transition: margin-left 2s, opacity 2s;
+}
+
+
+#imgPanel5-1{
+    position: absolute;
+    top: 23vh;
+    left: 0vw;
+    width: 40vw;
+    height: auto;
+    z-index: 5000;
+    opacity: 0;
+    object-fit: cover;
+    transition: left 2s, opacity 4s;
+}
+
+
+#imgPanel5-4{
+    position: absolute;
+    top: 37vh;
+    left: 70vw;
+    width: 40vw;
+    height: auto;
+opacity: 0;
+    z-index: 5001;
+    object-fit: cover;
+    transition: left 2s, opacity 4s;
+}
+
+
+
+
+
+
+
+#sidePanelButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* for demo only: */
+    cursor: pointer;
+    padding: 40px;
+    border: 1px solid #000;
+    background-color: tomato;
+}
+#sidePanel {
+    width: 100%;
+    height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    left: 100%;
+    transition: left 0.4s; /* creates sliding motion */
+    -webkit-transition: left 0.4s;
+    z-index: 1; /* needs to be above the mainStack */
+    background-color: tomato; /* you need to set a background-color here so this panel covers up the others when it slides in. */
+    /* for demo only: */
+    text-align: center;
+    font-size: 50px;
+}
+#sidePanel.open {
+    left: 0; /* move the sidePanel into the viewport when you click the button */
+}
+
+#textTitreMob {
+    display: none;
+}
+/*////////////////////////////////////////////////////////////////////*/
+
+#indicator {
+    position: absolute;
+    top: -10vh;
+    left: 58px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 4000;
+    opacity: 1;
+    transition: opacity 3s;
+
+}
+
+#indicator > div {
+    background-color: rgba(0 , 0 , 0, 0.15);
+    width:7px;
+    height:2px;
+    border-radius: 2px;
+    margin: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 3s;
+
+}
+
+#indicator > div.active {
+    background-color: white;
+
+
+    transform:scale(1.7);
+    width:10px;
+
+
+
+    box-shadow: inset -1px -1px 1px rgba(0,0,0,0.4),
+    2px 2px 5px rgba(0,0,0,0.07),
+    -2px 2px 5px rgba(0,0,0,0.07),
+    2px -2px 5px rgba(0,0,0,0.07),
+    -2px -2px 5px rgba(0,0,0,0.07);
+}
+
+
+#trait1{
+    width: 1px;
+    height: 50vh;
+    position: fixed;
+    bottom: 80vh;
+    left: 80px;
+    background: black;
+    opacity: 0.15;
+    z-index: 4000;
+
+}
+
+#trait2{
+    width: 1px;
+    height:25vh;
+    position: fixed;
+    top: 70vh;
+    left: 80px;
+    background: black;
+    opacity: 0.15;
+    z-index: 4000;
+
+
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+body{
+    height: 120vh;
+}
+
+.container{
+    margin-left: 45vw;
+}
+
+h1 {
+    font-family: "Ma Super Fonte light" , sans-serif, 'arial';
+
+    font-weight: 600;
+    font-size: 60px;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+    opacity: 0.7;
+    padding-top: 20vh;
+}
+
+h4 {
+    font-family: 'Ma Super Fonte light', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -15px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    font-family: "Ma Super Fonte light", Arial;
+    padding: 20px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    color: black;
+    border-radius: 4px;
+}
+
+textarea {
+    padding-top: 40px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    float: right;
+    padding: 7px 35px;
+    margin-bottom: 50px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #90cd90;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2),
+    0 2px 10px 0 rgba(0,0,0,0.1);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+    0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width:60vw;
+
+        float: none;
+ padding-right: -10vw;
+        text-align:center;
+    }
+}
+
+input[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1240px) {
+
+.panel p{
+    font-size: 15px;
+}
+
+    #panel3 p{
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+    }
+
+    #indicator {
+        top: -10vh;
+        left: 20px;
+    }
+
+    #indicator > div {
+       margin : 20px;
+    }
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 40px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 40px;
+    }
+
+    #sectionPlacement {
+        width: 130%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        height: 80px;
+    }
+
+    #sectionNav{
+        margin-left: -20vw;
+        margin-right: 0vh;
+        width: 80vw;
+
+    }
+
+    #navbar{
+
+        magin-left:-100px;
+
+    }
+
+
+    .onglet{
+
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-top: solid 2px;
+        border-top-color:rgba(180,15,0,0);
+        background-color: rgba(255,255,255,0);
+        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
+
+    }
+
+
+    #sectionPlacement {
+        font-size: 22px;
+    }
+
+
+    #phraseTop {
+        font-size: 17px;
+        left: 35%;
+    }
+
+    #imgLogoNav {
+        display: none;
+    }
+
+    #logo1div{
+    display: none;
+    }
+
+    #logo2div{
+        display: none;
+
+    }
+
+
+    #imgPetitLogoNav{
+        left: 40px;
+    }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+
+
+    .panel p{
+        font-size: 15px;
+    }
+
+    #panel3 p{
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+    }
+
+    #indicator {
+        top: -10vh;
+        left: 20px;
+    }
+
+    #indicator > div {
+        margin : 20px;
+    }
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 40px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 40px;
+    }
+
+    #imgPetitLogoNav{
+        position: absolute;
+        width: 5vw;
+        height: auto;
+        margin-top: 10px;
+      left: 20px;
+        opacity: 0;
+        transition: opacity 2s;
+
+    }
+
+
+    #divTextCapitalsTerre {
+        padding-left: 41vw;
+
+    }
+
+    .onglet{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+
+    #trait1 {
+        width: 1px;
+        height: 5vh;
+        position: fixed;
+        bottom: 80vh;
+        left: 18px;
+    }
+
+
+    #trait2 {
+        width: 1px;
+        left: 18px;
+    }
+
+
+
+    #imgPanel1{
+        display: none;
+        visibility: hidden;
+    }
+
+
+    #imgPanel1{
+        display: block;
+    }
+
+
+    #imgPanel1Mob {
+    width: 40%;
+    height: auto;
+    margin-right: 10vw;
+    object-fit: cover;
+    }
+
+    #sectionPlacement {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 90vh;
+        height: 60vh;
+    }
+
+    .onglet{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+    }
+
+
+    .onglet:hover{
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 3px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        cursor: pointer;
+       /* padding-right: 0px;
+        padding-top: 0px;*/
+        border-top: solid 2px;
+        border-top-color:rgba(255,255,255,1);
+        background-color: rgba(255,255,255,0.1);
+        transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
+    }
+
+    #sectionPlacement {
+       display: none;
+    }
+
+
+    #divTextCapitalsTerre {
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        top: 55%;
+        left: 0;
+        transition: opacity 0.1s;
+        background-color: rgba(255,255,255,0.055);
+        padding-left: 10vw;
+        /* margin-top: -2vh;*/
+        /* padding-bottom: 1px;
+         padding-top: 1px 0;
+     */
+    }
+
+
+    #imgPetitLogoNav{
+        opacity: 1;
+    }
+
+
+    #sectionNav p {
+        color: white;
+        font-size: 20px;
+        font-family: "Ma Super Fonte medium", Helvetica, Arial, sans-serif;
+
+        margin-left: 7vh;
+        margin-right: 3vw;
+    }
+
+    #indicator > div {
+        margin-left: -3px;}
+
+    #phraseTop {
+        display: none;
+    }
+
+    #imgPetitLogoNav{
+        position: absolute;
+        width: 10vh;
+        height: auto;
+        margin-top: -2vh;
+        left: 5vw;
+        opacity: 0;
+        transition: opacity 2s;
+
+    }
+    #imgBurger{
+        display: block;
+        position: absolute;
+        width: 7vh;
+        height: auto;
+        margin-top: -1vh;
+        right: 3.5vw;
+        opacity: 0.2;
+        transition: opacity 2s;
+    }
+
+
+    #mainStack{
+        margin-left: 0;
+    }
+
+    #panel1, #panel2, #panel3, #panel4, #panel5, #panel6 {
+        width: 100vw;
+
+    }
+
+
+    .divContenuPanel1{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel1  p{
+        position: static;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 15px;
+        margin-top: 20px;
+
+
+    }
+
+    #textTitreMob{
+display: block;
+        position: fixed;
+        top: 6vh;
+        left: 40vw;
+
+        font-family: "Ma Super Fonte medium", Verdana;
+        border-top: solid 1px;
+        border-top-color:rgba(0,0,0,1);
+        font-size: 20px;
+        z-index: 400;
+
+
+    }
+
+
+    #imgPanel1{
+display: none;
+
+
+    }
+    #imgPanel1Mob{
+        display: block;
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    .divContenuPanel2{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel2 > p{
+        position: static;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 15px;
+        margin-top: 20px;
+        width: 100%;
+
+
+    }
+
+
+    #imgPanel2{
+        display: block;
+        position: static;
+        width: 100%;
+        margin-top: 5vh;
+        height: auto;
+
+    }
+
+
+    .divContenuPanel3{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel3 > p{
+        position: absolute;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 15px;
+        margin-top: 40px;
+        width: 70%;
+        padding: 50px;
+        height: 80vh;
+
+left: 10vw;
+
+    }
+
+
+    #imgPanel3{
+
+        position: absolute;
+        width: 200%;
+        margin-top: 7vh;
+        height: auto;
+
+    }
+
+
+    .divContenuPanel4{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 17vh;
+        z-index: 3000;
+
+        left: 11%;
+        width: 80%;
+        height: auto;
+    }
+
+    .divContenuPanel4>p{
+        position: absolute;
+        font-family: "Ma Super Fonte light", Verdana;
+        font-size: 15px;
+        top: 20vh;
+        left: 0;
+        width: 70%;
+        padding-top: 10vh;
+        z-index: 6000;
+        background-color:whitesmoke ;
+        color: black;
+        opacity: 0;
+        z-index: 3000;
+    }
+
+
+    #imgPanel4{
+        position: absolute;
+        width: 30vw;
+        margin-top: 3vh;
+        height: auto;
+        top: -7vh;
+        left: 90vw;
+        z-index: 5000;
+    }
+
+
+
+    .displaynone{
+        visibility: hidden;
+        display: none;
+    }
+
+
+    #imgPanel5-1{
+        position: absolute;
+        top: 18vh;
+        left: 2vw;
+        width: 60vw;
+        height: auto;
+        z-index: 5000;
+        opacity: 0;
+        object-fit: cover;
+        transition: left 2s, opacity 4s;
+    }
+
+    .divContenuPanel5 p {
+
+        top: 35vh;
+        left: 20vw;
+        width: 45vw;
+        height: 15vh;
+        padding: 30px;
+
+
+    }
+
+    #imgPanel5-4{
+        position: absolute;
+        top: 60vh;
+        left: 45vw;
+        width: 60vw;
+        height: auto;
+        opacity: 0;
+        z-index: 5001;
+        object-fit: cover;
+        transition: left 2s, opacity 4s;
+    }
+
+
+}
+
+@media screen and (max-height: 500px) {
+
+
+
+}
+
+
+@media screen and (max-height: 400px) and (max-width: 670px) {
+
+    #divTextCapitalsTerre {
+        position: absolute;
+        width: 100%;
+        height: 160px;
+        top: 35%;
+        left: 0;
+        transition: opacity 0.1s;
+        background-color: rgba(255,255,255,0.055);
+        padding-left: 10vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
+
+
+
+    }
+
+}
+
+
+
+@media screen and (max-device-width: 800px) {
+   /* html {
+        background: url(Asset/Image/fondHerbePortrait.jpg) #000 no-repeat center center fixed;
+        background-size: cover ;
+    }
+
+    #bgvid {
+        display: none;
+    }*/
+}
