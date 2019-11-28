@@ -139,7 +139,11 @@ function update_menu() {
         navbarSectionText.style.color = "black";
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel + hauteur_pannel)) {
         navbarSectionText.style.color = "black";
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
 
+        }
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel + hauteur_pannel)) {
         indexPanel = 4;
 
@@ -149,6 +153,12 @@ function update_menu() {
         textP4.style.opacity = "0.7";
         indice4.classList.add("active");
         indice3.classList.remove("active");
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+
+        }
 
 
     } else if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
@@ -163,6 +173,11 @@ function update_menu() {
         indice3.classList.add("active");
         indice2.classList.remove("active");
 
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+        }
+
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
         indexPanel = 2;
@@ -172,6 +187,10 @@ function update_menu() {
         imgPanel2.style.marginLeft = "-1vw";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+        }
 
         indice3.classList.remove("active");
         indice2.classList.add("active");
@@ -186,11 +205,11 @@ function update_menu() {
 
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "black";
-        // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0)";
-
-        /*for (i = 0; i < onglet.length; i++) {
+        for (var i = 0; i < onglet.length; i++) {
             onglet[i].classList.remove("ongletSurFondBlanc");
-        }*/
+            onglet[i].classList.add("ongletSurFondGris");
+        }
+
 
         imgPetitLogoNav.style.transition = "opacity 0.2s";
 

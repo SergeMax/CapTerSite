@@ -342,13 +342,10 @@ function update_menu() {
         onglet[0].style.borderTopColor = "white";
 
         indice1.style.backgroundColor =  "rgba(255,255,255, 1)";
-
         indice2.style.backgroundColor =  "rgba(255,255,255, 0.5)";
         indice3.style.backgroundColor =  "rgba(255,255,255, 0.5)";
         indice4.style.backgroundColor =  "rgba(255,255,255, 0.5)";
-
         indice5.style.backgroundColor =  "rgba(255,255,255, 0.5)";
-
         trait1.style.backgroundColor = "rgba(255,255,255,0.8)";
         trait2.style.backgroundColor = "rgba(255,255,255,0.8)";
 
@@ -552,13 +549,7 @@ function swipe(e) {
     } else if (scrollDirection == "down" && lastScrollTop < div5y + 50 || lastScrollTop < div5y - 50) {
         targetUp = $('#panel4');
         targetDown = $('#panel5');
-    } //else if (scrollDirection == "down" && lastScrollTop < div6y + 50 || lastScrollTop < div6y - 50) {
-        //targetUp = $('#panel5');
-       // targetDown = $('#panel6');
-    //} /*else if (scrollDirection == "down" && lastScrollTop > div6y || lastScrollTop < div7y - 50) {
-      //  targetUp = $('#panel6');
-        //targetDown = $('#panel6');
-   // } */// end else if
+    }
 
     // condition: determine which of targetUp or targetDown to scroll to, based on scrollDirection:
     if (scrollDirection === 'down') {

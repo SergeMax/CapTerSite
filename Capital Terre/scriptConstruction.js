@@ -145,6 +145,14 @@ function update_menu() {
             imgPanel51.style.left = "8vw";
         }
 
+
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+
+        }
+
+
         textP5.style.opacity = "0.7";
         indice5.classList.add("active");
         indice4.classList.remove("active");
@@ -167,6 +175,11 @@ function update_menu() {
             imgPanel4.style.width = "100vw";
         }
 
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+
+        }
 
 
 
@@ -189,47 +202,28 @@ function update_menu() {
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");
-
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+        }
 
     } else if (scroll_Y > hauteur_fenetre - hauteur_fenetre_Corrige) {
         indexPanel = 2;
 
         navbarSectionText.style.color = "black";
 
-       imgPanel2.style.marginLeft = "0";
+        imgPanel2.style.marginLeft = "0";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.add("ongletSurFondBlanc");
+            onglet[i].classList.remove("ongletSurFondGris");
+        }
 
         indice3.classList.remove("active");
         indice2.classList.add("active");
         indice1.classList.remove("active");
 
-
-
-
-
-       /* #imgPanel1{
-            width: 40%;
-            height: auto;
-            margin-right: 10vw;
-            object-fit: cover;
-
-        }
-
-        #imgPanel1Mob{
-            width: 40%;
-            height: auto;
-            margin-right: 10vw;
-            object-fit: cover;
-
-        }*/
-
-
-        // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0.4)";
-
-       /* for (i = 0; i < onglet.length; i++) {
-            onglet[i].classList.add("ongletSurFondBlanc");
-        }*/
 
         imgPetitLogoNav.style.opacity = 0.7;
         // On n'utilise pas .className = "sticky" ni .setAttribute("class", "sticky") car ces manières de faire remplacent tout l'attribut "class"
@@ -237,16 +231,12 @@ function update_menu() {
         indexPanel = 1;
         indice1.classList.add("active");
         indice2.classList.remove("active");
-
-
-
+        for (var i = 0; i < onglet.length; i++) {
+            onglet[i].classList.remove("ongletSurFondBlanc");
+            onglet[i].classList.add("ongletSurFondGris");
+        }
         navbarSectionText.classList.remove("displaynone");
         navbarSectionText.style.color = "black";
-        // navbarSectionText.style.backgroundColor = "rgba(255,255,255,0)";
-
-        /*for (i = 0; i < onglet.length; i++) {
-            onglet[i].classList.remove("ongletSurFondBlanc");
-        }*/
 
         imgPetitLogoNav.style.transition = "opacity 0.2s";
 
