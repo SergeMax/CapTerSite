@@ -630,13 +630,13 @@ transition: opacity 2s;
     position: absolute;
     top : 20%;
     left: 30%;
-    width: 70%;
+    width: 60%;
     height: auto;
     opacity: 0;
     margin-left: 5vw;
 opacity: 0;
     object-fit: cover;
-    transition: margin-left 2s, opacity 2s;
+    transition: margin-left 2s, opacity 2s, width 2s;
 }
 
 #textP2{
@@ -897,6 +897,34 @@ opacity: 0;
     -2px -2px 5px rgba(0,0,0,0.07);
 }
 
+
+
+.indiceExtend{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin-top: -11.7px;
+    margin-left: -9px;
+
+}
+
+#indicator > div.active > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+#indicator > div.active2 > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+.indiceExtend:hover{
+    cursor: pointer;
+    background-color: rgba(144,205,144,0.2);
+
+}
 
 #trait1{
     width: 1px;
@@ -1414,7 +1442,7 @@ left: 10vw;
 
     .divContenuPanel5 p {
 
-        top: 35vh;
+        top: 38vh;
         left: 20vw;
         width: 45vw;
         height: 15vh;

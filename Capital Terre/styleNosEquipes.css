@@ -42,15 +42,13 @@ body {
 
 }
 
-a:link
-{
-    text-decoration:none;
+a:link {
+    text-decoration: none;
     color: black;
 }
 
-a
-{
-    text-decoration:none;
+a {
+    text-decoration: none;
     color: black;
 }
 
@@ -90,7 +88,6 @@ video {
 }
 
 
-
 #navbar {
     position: relative;
     height: 10vh;
@@ -105,7 +102,7 @@ video {
 
 }
 
-#divIntro{
+#divIntro {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,9 +113,9 @@ video {
 
 }
 
-#imgPetitLogoNav{
+#imgPetitLogoNav {
     position: absolute;
-width: 5vw;
+    width: 5vw;
     height: auto;
     margin-top: 10px;
     right: 65vw;
@@ -127,7 +124,7 @@ width: 5vw;
 
 }
 
-#imgBandeOblique{
+#imgBandeOblique {
     position: absolute;
     width: auto;
     height: 120vh;
@@ -137,11 +134,12 @@ width: 5vw;
     transition: opacity 0.1s;
 
 }
-#logo1{
-position: absolute;
+
+#logo1 {
+    position: absolute;
     top: 60%;
     right: 5%;
-    left:-5%;
+    left: -5%;
 
     max-width: auto;
     /*  height: 1000px;*/
@@ -149,16 +147,16 @@ position: absolute;
     opacity: 0;
 
     margin-top: 0;
-transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
+    transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     z-index: 500;
 
 }
 
-#logo2{
+#logo2 {
     position: absolute;
     top: 60%;
     right: 5%;
-    left:-5%;
+    left: -5%;
 
     max-width: auto;
     /*  height: 1000px;*/
@@ -171,7 +169,9 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 
 }
 
-#imgBurger{display: none;}
+#imgBurger {
+    display: none;
+}
 
 #sectionNav {
 
@@ -201,21 +201,20 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     opacity: 1;
     padding-left: 10px;
     padding-right: 10px;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     transition: background-color 0.3s, color 0.3s;
 }
 
 
-
-.onglet{
+.onglet {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 3px;
     margin-left: 5px;
     margin-right: 5px;
     border-top: solid 2px;
-    border-top-color:rgba(0,0,0,0);
-    background-color: rgba(255,255,255,0);
+    border-top-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
     height: 40px;
     opacity: 0;
     transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
@@ -225,26 +224,26 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 }
 
 
-.onglet:hover{
+.onglet:hover {
     cursor: pointer;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 3px;
     border-top: solid 2px;
     border-top-color: rgb(0, 0, 0);
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
 }
 
-.ongletSurFondGris:hover{
-    background-color: rgba(255,255,255,1);
-    border-top-color:rgba(0,0,0,1);
+.ongletSurFondGris:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-top-color: rgba(0, 0, 0, 1);
 
 }
 
-.ongletSurFondBlanc:hover{
-    background-color: rgba(245,245,245,1);
-    border-top-color:rgba(0,0,0,1);
+.ongletSurFondBlanc:hover {
+    background-color: rgba(245, 245, 245, 1);
+    border-top-color: rgba(0, 0, 0, 1);
 
 }
 
@@ -262,10 +261,10 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     position: absolute;
     top: -10%;
     right: 5%;
-    left:-55%;
+    left: -55%;
 
     max-width: auto;
-  /*  height: 1000px;*/
+    /*  height: 1000px;*/
     height: 120vh;
     opacity: 0;
 
@@ -284,41 +283,41 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     top: 44%;
     left: 0;
     transition: opacity 0.1s;
-    background-color: rgba(255,255,255,0.055);
+    background-color: rgba(255, 255, 255, 0.055);
     padding-left: 51vw;
-   /* margin-top: -2vh;*/
-   /* padding-bottom: 1px;
-    padding-top: 1px 0;
-*/
+    /* margin-top: -2vh;*/
+    /* padding-bottom: 1px;
+     padding-top: 1px 0;
+ */
 }
 
-#textCapitalsTerre{
+#textCapitalsTerre {
 
     /*font-family: 'Overpass', sans-serif;*/
-   /*font-family: 'Cormorant Garamond', serif;*/
+    /*font-family: 'Cormorant Garamond', serif;*/
     font-family: 'Playfair Display', serif;
     /* font-family: "Ma Super Fonte light";*/
     /*position: relative;*/
     font-weight: 400;
-   /* top:-100%;
-    left: 0;*/
+    /* top:-100%;
+     left: 0;*/
     margin-top: 0px;
     font-size: 7em;
     color: white;
     opacity: 0;
     letter-spacing: 0px;
-   /* text-shadow:  2px 8px 3px rgba(0,0,0,0.1),
-    0px -5px 35px rgba(255,255,255,0.5);*/
+    /* text-shadow:  2px 8px 3px rgba(0,0,0,0.1),
+     0px -5px 35px rgba(255,255,255,0.5);*/
     transition: opacity 3s, letter-spacing 1s, padding-left 2s, font-size 1s;
 
 }
 
 
-#textTerres{
-   /* font-family: 'Cormorant Garamond', serif;*/
+#textTerres {
+    /* font-family: 'Cormorant Garamond', serif;*/
     font-family: 'Playfair Display', serif;
 
-   /* font-family: 'Overpass', sans-serif;*/
+    /* font-family: 'Overpass', sans-serif;*/
     /* font-family: "Ma Super Fonte light";*/
     position: relative;
     font-weight: 400;
@@ -335,11 +334,12 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 
 }
 
-.paddingLefttMax{
+.paddingLefttMax {
     padding-left: 20vw;
 }
-.paddingLefttMaxT{
- right: -40%;
+
+.paddingLefttMaxT {
+    right: -40%;
     visibility: hidden;
 }
 
@@ -382,6 +382,7 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     text-decoration: none;
     transition: opacity .3s;
 }
+
 .flech a:hover {
     opacity: .5;
 }
@@ -390,6 +391,7 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 #section05 a {
     padding-top: 70px;
 }
+
 #section05 a span {
     position: absolute;
     top: 0;
@@ -405,6 +407,7 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     animation: sdb05 1.5s infinite;
     box-sizing: border-box;
 }
+
 @-webkit-keyframes sdb05 {
     0% {
         -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -418,6 +421,7 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
         opacity: 0;
     }
 }
+
 @keyframes sdb05 {
     0% {
         transform: rotate(-45deg) translate(0, 0);
@@ -433,8 +437,7 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
 }
 
 
-
-.fleche{
+.fleche {
     position: absolute;
     top: 98vh;
     left: 48%;
@@ -443,37 +446,30 @@ transition: opacity 4s, left 2.8s, height 2.8s, top 2.8s;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #fff;
-    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
     z-index: 300;
 }
+
 .fleche a:hover {
     opacity: .5;
 }
 
-#imgPanel1Mob{
+#imgPanel1Mob {
     display: none;
 }
 
-    /*transition: opacity 0.3s;*/
-
-
-
-
+/*transition: opacity 0.3s;*/
 
 
 /*/////  FIN  FLECHE QUI CLIGNOTTE   ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-
-
-
-
-
 * {
 }
+
 html, body {
     margin: 0;
     padding: 0;
@@ -489,8 +485,9 @@ html, body {
     /* for demo only: */
     min-width: 250px;
     border-right: 1px solid #000;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
 #leftSidebar > ul {
     /* all of these are for demo only: */
     list-style: none;
@@ -498,23 +495,25 @@ html, body {
     padding: 0;
     width: 100%;
 }
+
 #leftSidebar > ul > li {
     /* all of these are for demo only: */
     width: 100%;
     padding: 10px 20px;
     border-bottom: 1px solid #999;
 }
+
 #panel1, #panel2, #panel3, #panel4, #panel5, #panel6 {
 
-position: relative;
+    position: relative;
     /* all of these are for demo only: */
     width: 100%;
     height: 95vh;
     /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
-z-index: 250;
+    z-index: 250;
 }
 
-.panel{
+.panel {
     overflow: hidden;
 }
 
@@ -524,7 +523,7 @@ z-index: 250;
     opacity: 1;
 }
 
-#panel1{
+#panel1 {
     opacity: 1;
 
 }
@@ -535,10 +534,10 @@ z-index: 250;
     opacity: 1;
 }
 
-#panel2{
-   /* -webkit-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
-    box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);*/
+#panel2 {
+    /* -webkit-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+     -moz-box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);
+     box-shadow: 0px 0px 37px 11px rgba(255,255,255,1);*/
 
     opacity: 1;
 }
@@ -547,7 +546,7 @@ z-index: 250;
     height: 100vh;
 }
 
-.divContenuPanel1{
+.divContenuPanel1 {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -557,9 +556,9 @@ z-index: 250;
     height: auto;
 }
 
-.divContenuPanel1 > p{
+.divContenuPanel1 > p {
     position: absolute;
-    top : 10%;
+    top: 10%;
     left: 50%;
     opacity: 0;
 
@@ -568,21 +567,21 @@ z-index: 250;
     font-size: 20px;
     margin-top: 2%;
     text-align: justify;
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 50px;
     /*background-color: white;*/
-   /* padding: 50px;*/
+    /* padding: 50px;*/
     height: 32vh;
     transition: opacity 2s;
 
 }
 
-#textP1{
+#textP1 {
     opacity: 0;
 }
 
 
-#imgPanel1{
+#imgPanel1 {
 
     width: 60%;
     height: auto;
@@ -590,10 +589,10 @@ z-index: 250;
     margin-left: -5vw;
     opacity: 0;
     object-fit: cover;
-transition: margin-left 1s, opacity 2s;
+    transition: margin-left 1s, opacity 2s;
 }
 
-#imgPanel1Mob{
+#imgPanel1Mob {
     width: 40%;
     height: auto;
     margin-right: 10vw;
@@ -602,51 +601,50 @@ transition: margin-left 1s, opacity 2s;
 }
 
 
-.divContenuPanel2{
-     display: flex;
-     flex-direction: row;
-     position: relative;
-     top: 25%;
-     left: 10%;
-     width: 90%;
-     height: auto;
- }
+.divContenuPanel2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 25%;
+    left: 10%;
+    width: 90%;
+    height: auto;
+}
 
-.divContenuPanel2 > p{
-position: absolute;
-    top : 25%;
+.divContenuPanel2 > p {
+    position: absolute;
+    top: 25%;
     left: -2%;
     width: 25%;
     height: 40%;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
-transition: opacity 2s;
+    transition: opacity 2s;
     text-align: justify;
-
 
 
 }
 
 
-#imgPanel2{
+#imgPanel2 {
     position: absolute;
-    top : 20%;
+    top: 20%;
     left: 30%;
     width: 70%;
     height: auto;
     opacity: 0;
     margin-left: 5vw;
-opacity: 0;
+    opacity: 0;
     object-fit: cover;
     transition: margin-left 2s, opacity 2s;
 }
 
-#textP2{
+#textP2 {
     opacity: 0;
 }
 
 
-.divContenuPanel3{
+.divContenuPanel3 {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -656,14 +654,14 @@ opacity: 0;
     height: auto;
 }
 
-.divContenuPanel3 > p{
+.divContenuPanel3 > p {
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
     position: absolute;
     background-color: white;
     top: -7vh;
     left: 30vw;
-z-index: 2000;
+    z-index: 2000;
     width: 40vw;
     height: 50vh;
     padding: 80px;
@@ -672,17 +670,17 @@ z-index: 2000;
 
 }
 
-#textP3{
+#textP3 {
     opacity: 0;
 }
 
-#imgPanel3{
+#imgPanel3 {
 
     position: absolute;
-    top : 0%;
+    top: 0%;
     left: 0%;
 
-opacity: 0;
+    opacity: 0;
 
     width: 90%;
     height: 80vh;
@@ -695,7 +693,7 @@ opacity: 0;
 }
 
 
-.divContenuPanel4{
+.divContenuPanel4 {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -705,7 +703,7 @@ opacity: 0;
     height: auto;
 }
 
-.divContenuPanel4 > p{
+.divContenuPanel4 > p {
     position: absolute;
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
@@ -717,25 +715,26 @@ opacity: 0;
     height: 45vh;
     padding: 50px;
 
-z-index: 3500;
+    z-index: 3500;
     color: black;
 
     text-align: justify;
     transition: margin-left 2s, opacity 2s;
 
 }
-#textP4{
+
+#textP4 {
     opacity: 0;
 }
 
 
-#imgPanel4{
+#imgPanel4 {
     position: absolute;
     top: 10vh;
     left: 70vw;
     width: 30vw;
     height: auto;
-z-index: 4000;
+    z-index: 4000;
     opacity: 0;
     object-fit: cover;
     transition: left 12s, opacity 8s, width 12s, top 10s;
@@ -743,7 +742,7 @@ z-index: 4000;
 
 }
 
-.divContenuPanel5{
+.divContenuPanel5 {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -756,11 +755,10 @@ z-index: 4000;
 }
 
 
-
 .divContenuPanel5 p {
     font-family: "Ma Super Fonte light", Verdana;
     font-size: 20px;
-    position : absolute;
+    position: absolute;
     top: 25vh;
     left: 32vw;
     background-color: white;
@@ -773,24 +771,25 @@ z-index: 4000;
     transition: margin-left 2s, opacity 2s;
 
 }
-#textP5{
+
+#textP5 {
     opacity: 1;
 }
 
 
-#imgPanel5{
+#imgPanel5 {
     position: absolute;
     top: 19vh;
     left: 5vw;
     width: 70vw;
     height: auto;
-z-index: 5000;
+    z-index: 5000;
     object-fit: cover;
     transition: margin-left 2s, opacity 2s;
 }
 
 
-#imgPanel5-1{
+#imgPanel5-1 {
     position: absolute;
     top: 23vh;
     left: 0vw;
@@ -803,22 +802,17 @@ z-index: 5000;
 }
 
 
-#imgPanel5-4{
+#imgPanel5-4 {
     position: absolute;
     top: 37vh;
     left: 70vw;
     width: 40vw;
     height: auto;
-opacity: 0;
+    opacity: 0;
     z-index: 5001;
     object-fit: cover;
     transition: left 2s, opacity 4s;
 }
-
-
-
-
-
 
 
 #sidePanelButton {
@@ -831,6 +825,7 @@ opacity: 0;
     border: 1px solid #000;
     background-color: tomato;
 }
+
 #sidePanel {
     width: 100%;
     height: 100vh; /* css3 way to say 100% of the viewport height. works on IE9+ and modern browsers. needs patch for iOS devices: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587. also needs patch for print stylesheets (height:auto). */
@@ -847,6 +842,7 @@ opacity: 0;
     text-align: center;
     font-size: 50px;
 }
+
 #sidePanel.open {
     left: 0; /* move the sidePanel into the viewport when you click the button */
 }
@@ -854,6 +850,7 @@ opacity: 0;
 #textTitreMob {
     display: none;
 }
+
 /*////////////////////////////////////////////////////////////////////*/
 
 #indicator {
@@ -871,9 +868,9 @@ opacity: 0;
 }
 
 #indicator > div {
-    background-color: rgba(0 , 0 , 0, 0.15);
-    width:7px;
-    height:2px;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 7px;
+    height: 2px;
     border-radius: 2px;
     margin: 40px;
     margin-left: 20px;
@@ -887,20 +884,45 @@ opacity: 0;
     background-color: white;
 
 
-    transform:scale(1.7);
-    width:10px;
+    transform: scale(1.7);
+    width: 10px;
 
-
-
-    box-shadow: inset -1px -1px 1px rgba(0,0,0,0.4),
-    2px 2px 5px rgba(0,0,0,0.07),
-    -2px 2px 5px rgba(0,0,0,0.07),
-    2px -2px 5px rgba(0,0,0,0.07),
-    -2px -2px 5px rgba(0,0,0,0.07);
+    box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.4),
+    2px 2px 5px rgba(0, 0, 0, 0.07),
+    -2px 2px 5px rgba(0, 0, 0, 0.07),
+    2px -2px 5px rgba(0, 0, 0, 0.07),
+    -2px -2px 5px rgba(0, 0, 0, 0.07);
 }
 
 
-#trait1{
+.indiceExtend {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin-top: -11.7px;
+    margin-left: -9px;
+
+}
+
+#indicator > div.active > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+#indicator > div.active2 > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+.indiceExtend:hover {
+    cursor: pointer;
+    background-color: rgba(144, 205, 144, 0.2);
+
+}
+
+#trait1 {
     width: 1px;
     height: 50vh;
     position: fixed;
@@ -912,9 +934,9 @@ opacity: 0;
 
 }
 
-#trait2{
+#trait2 {
     width: 1px;
-    height:25vh;
+    height: 25vh;
     position: fixed;
     top: 70vh;
     left: 80px;
@@ -929,11 +951,11 @@ opacity: 0;
 
 @media screen and (max-width: 1240px) {
 
-.panel p{
-    font-size: 15px;
-}
+    .panel p {
+        font-size: 15px;
+    }
 
-    #panel3 p{
+    #panel3 p {
         padding-top: 20px;
         padding-bottom: 100px;
 
@@ -945,7 +967,7 @@ opacity: 0;
     }
 
     #indicator > div {
-       margin : 20px;
+        margin: 20px;
     }
 
 
@@ -972,21 +994,21 @@ opacity: 0;
         height: 80px;
     }
 
-    #sectionNav{
+    #sectionNav {
         margin-left: -20vw;
         margin-right: 0vh;
         width: 80vw;
 
     }
 
-    #navbar{
+    #navbar {
 
-        magin-left:-100px;
+        magin-left: -100px;
 
     }
 
 
-    .onglet{
+    .onglet {
 
         padding-left: 0px;
         padding-right: 0px;
@@ -994,8 +1016,8 @@ opacity: 0;
         margin-left: 15px;
         margin-right: 15px;
         border-top: solid 2px;
-        border-top-color:rgba(180,15,0,0);
-        background-color: rgba(255,255,255,0);
+        border-top-color: rgba(180, 15, 0, 0);
+        background-color: rgba(255, 255, 255, 0);
         transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, opacity 6s;
 
     }
@@ -1015,35 +1037,32 @@ opacity: 0;
         display: none;
     }
 
-    #logo1div{
-    display: none;
+    #logo1div {
+        display: none;
     }
 
-    #logo2div{
+    #logo2div {
         display: none;
 
     }
 
 
-    #imgPetitLogoNav{
+    #imgPetitLogoNav {
         left: 40px;
     }
-
 
 
 }
 
 
-
-
 @media screen and (max-width: 850px) {
 
 
-    .panel p{
+    .panel p {
         font-size: 15px;
     }
 
-    #panel3 p{
+    #panel3 p {
         padding-top: 20px;
         padding-bottom: 100px;
 
@@ -1055,8 +1074,9 @@ opacity: 0;
     }
 
     #indicator > div {
-        margin : 20px;
+        margin: 20px;
     }
+
 
 
     #trait1 {
@@ -1073,15 +1093,38 @@ opacity: 0;
         left: 40px;
     }
 
-    #imgPetitLogoNav{
+    #imgPetitLogoNav {
         position: absolute;
         width: 5vw;
         height: auto;
         margin-top: 10px;
-      left: 20px;
+        left: 20px;
         opacity: 0;
         transition: opacity 2s;
 
+    }
+
+    .divContenuPanel1 p {
+        font-size: 13px;
+padding: 30px;
+        height: 50vw;
+    }
+
+    .divContenuPanel2 p {
+        font-size: 13px;
+        padding: 30px;
+        top: -8vh;
+        left: -2vw;
+    }
+
+    .divContenuPanel3 p {
+        font-size: 13px;
+        padding: 30px;
+        height: 50vw;
+        width: 50vw;
+        left: 30vw;
+        padding-top: 100px;
+        background-color: rgba(255,255,255,0.9);
     }
 
 
@@ -1090,7 +1133,7 @@ opacity: 0;
 
     }
 
-    .onglet{
+    .onglet {
         font-size: 17px;
     }
 }
@@ -1113,23 +1156,22 @@ opacity: 0;
     }
 
 
-
-    #imgPanel1{
+    #imgPanel1 {
         display: none;
         visibility: hidden;
     }
 
 
-    #imgPanel1{
+    #imgPanel1 {
         display: block;
     }
 
 
     #imgPanel1Mob {
-    width: 40%;
-    height: auto;
-    margin-right: 10vw;
-    object-fit: cover;
+        width: 40%;
+        height: auto;
+        margin-right: 10vw;
+        object-fit: cover;
     }
 
     #sectionPlacement {
@@ -1141,7 +1183,7 @@ opacity: 0;
         height: 60vh;
     }
 
-    .onglet{
+    .onglet {
         margin-bottom: 10px;
         margin-top: 10px;
         padding-right: 20px;
@@ -1150,7 +1192,7 @@ opacity: 0;
     }
 
 
-    .onglet:hover{
+    .onglet:hover {
 
         padding-left: 20px;
         padding-right: 20px;
@@ -1159,16 +1201,16 @@ opacity: 0;
         margin-right: 5px;
 
         cursor: pointer;
-       /* padding-right: 0px;
-        padding-top: 0px;*/
+        /* padding-right: 0px;
+         padding-top: 0px;*/
         border-top: solid 2px;
-        border-top-color:rgba(255,255,255,1);
-        background-color: rgba(255,255,255,0.1);
+        border-top-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.1);
         transition: padding-right 0.5s, padding-left 0.5s, background-color 0.5s, border-top-color 0.5s;
     }
 
     #sectionPlacement {
-       display: none;
+        display: none;
     }
 
 
@@ -1179,7 +1221,7 @@ opacity: 0;
         top: 55%;
         left: 0;
         transition: opacity 0.1s;
-        background-color: rgba(255,255,255,0.055);
+        background-color: rgba(255, 255, 255, 0.055);
         padding-left: 10vw;
         /* margin-top: -2vh;*/
         /* padding-bottom: 1px;
@@ -1188,7 +1230,7 @@ opacity: 0;
     }
 
 
-    #imgPetitLogoNav{
+    #imgPetitLogoNav {
         opacity: 1;
     }
 
@@ -1203,13 +1245,14 @@ opacity: 0;
     }
 
     #indicator > div {
-        margin-left: -3px;}
+        margin-left: -3px;
+    }
 
     #phraseTop {
         display: none;
     }
 
-    #imgPetitLogoNav{
+    #imgPetitLogoNav {
         position: absolute;
         width: 10vh;
         height: auto;
@@ -1219,7 +1262,8 @@ opacity: 0;
         transition: opacity 2s;
 
     }
-    #imgBurger{
+
+    #imgBurger {
         display: block;
         position: absolute;
         width: 7vh;
@@ -1231,7 +1275,7 @@ opacity: 0;
     }
 
 
-    #mainStack{
+    #mainStack {
         margin-left: 0;
     }
 
@@ -1241,7 +1285,7 @@ opacity: 0;
     }
 
 
-    .divContenuPanel1{
+    .divContenuPanel1 {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1252,24 +1296,25 @@ opacity: 0;
         height: auto;
     }
 
-    .divContenuPanel1  p{
+    .divContenuPanel1 p {
         position: static;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 15px;
+        font-size: 13px;
+
         margin-top: 20px;
 
 
     }
 
-    #textTitreMob{
-display: block;
+    #textTitreMob {
+        display: block;
         position: fixed;
         top: 6vh;
         left: 40vw;
 
         font-family: "Ma Super Fonte medium", Verdana;
         border-top: solid 1px;
-        border-top-color:rgba(0,0,0,1);
+        border-top-color: rgba(0, 0, 0, 1);
         font-size: 20px;
         z-index: 400;
 
@@ -1277,20 +1322,22 @@ display: block;
     }
 
 
-    #imgPanel1{
-display: none;
+    #imgPanel1 {
+        display: none;
 
 
     }
-    #imgPanel1Mob{
+
+    #imgPanel1Mob {
         display: block;
-        width: 100%;
+        width: 70vw;
+        margin-left: 5vw;
         height: auto;
-
+        transition: width 2s, opacity 2s, margin-left 2s;
 
     }
 
-    .divContenuPanel2{
+    .divContenuPanel2 {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1301,10 +1348,11 @@ display: none;
         height: auto;
     }
 
-    .divContenuPanel2 > p{
+    .divContenuPanel2 > p {
         position: static;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 15px;
+        font-size: 13px;
+
         margin-top: 20px;
         width: 100%;
 
@@ -1312,17 +1360,17 @@ display: none;
     }
 
 
-    #imgPanel2{
+    #imgPanel2 {
         display: block;
         position: static;
-        width: 100%;
+        width: 120%;
         margin-top: 5vh;
         height: auto;
 
     }
 
 
-    .divContenuPanel3{
+    .divContenuPanel3 {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1332,21 +1380,22 @@ display: none;
         height: auto;
     }
 
-    .divContenuPanel3 > p{
+    .divContenuPanel3 > p {
         position: absolute;
         font-family: "Ma Super Fonte light", Verdana;
-        font-size: 15px;
-        margin-top: 40px;
-        width: 70%;
+        font-size: 13px;
+        margin-top: 40vh;
+        width: 80%;
         padding: 50px;
-        height: 80vh;
-
-left: 10vw;
+        height: 60vh;
+background-color: rgba(255,255,255, 0.8);
+        left: 0vw;
+        padding-top: 100px;
 
     }
 
 
-    #imgPanel3{
+    #imgPanel3 {
 
         position: absolute;
         width: 200%;
@@ -1356,7 +1405,7 @@ left: 10vw;
     }
 
 
-    .divContenuPanel4{
+    .divContenuPanel4 {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1368,7 +1417,7 @@ left: 10vw;
         height: auto;
     }
 
-    .divContenuPanel4>p{
+    .divContenuPanel4 > p {
         position: absolute;
         font-family: "Ma Super Fonte light", Verdana;
         font-size: 15px;
@@ -1377,14 +1426,14 @@ left: 10vw;
         width: 70%;
         padding-top: 10vh;
         z-index: 6000;
-        background-color:whitesmoke ;
+        background-color: whitesmoke;
         color: black;
         opacity: 0;
         z-index: 3000;
     }
 
 
-    #imgPanel4{
+    #imgPanel4 {
         position: absolute;
         width: 30vw;
         margin-top: 3vh;
@@ -1395,14 +1444,13 @@ left: 10vw;
     }
 
 
-
-    .displaynone{
+    .displaynone {
         visibility: hidden;
         display: none;
     }
 
 
-    #imgPanel5-1{
+    #imgPanel5-1 {
         position: absolute;
         top: 18vh;
         left: 2vw;
@@ -1425,7 +1473,7 @@ left: 10vw;
 
     }
 
-    #imgPanel5-4{
+    #imgPanel5-4 {
         position: absolute;
         top: 60vh;
         left: 45vw;
@@ -1443,7 +1491,6 @@ left: 10vw;
 @media screen and (max-height: 500px) {
 
 
-
 }
 
 
@@ -1456,12 +1503,10 @@ left: 10vw;
         top: 35%;
         left: 0;
         transition: opacity 0.1s;
-        background-color: rgba(255,255,255,0.055);
+        background-color: rgba(255, 255, 255, 0.055);
         padding-left: 10vw;
         padding-top: 5vh;
         padding-bottom: 5vh;
-
-
 
 
     }
@@ -1469,14 +1514,13 @@ left: 10vw;
 }
 
 
-
 @media screen and (max-device-width: 800px) {
-   /* html {
-        background: url(Asset/Image/fondHerbePortrait.jpg) #000 no-repeat center center fixed;
-        background-size: cover ;
-    }
+    /* html {
+         background: url(Asset/Image/fondHerbePortrait.jpg) #000 no-repeat center center fixed;
+         background-size: cover ;
+     }
 
-    #bgvid {
-        display: none;
-    }*/
+     #bgvid {
+         display: none;
+     }*/
 }

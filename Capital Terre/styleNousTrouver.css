@@ -890,6 +890,32 @@ opacity: 0;
     -2px -2px 5px rgba(0,0,0,0.07);
 }
 
+.indiceExtend{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin-top: -11.7px;
+    margin-left: -9px;
+
+}
+
+#indicator > div.active > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+#indicator > div.active2 > .indiceExtend {
+
+    margin-top: -11.7px;
+    margin-left: -7.7px;
+}
+
+.indiceExtend:hover{
+    cursor: pointer;
+    background-color: rgba(144,205,144,0.3);
+
+}
 
 #trait1{
     width: 1px;

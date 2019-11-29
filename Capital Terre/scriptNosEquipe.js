@@ -36,17 +36,12 @@ var imgPanel54 = document.getElementById("imgPanel5-4");
 var textP5 = document.getElementById("textP4");
 
 
-
-var indexPanel =1;
-
-
-
+var indexPanel = 1;
 
 
 var hauteur_fenetre = window.innerHeight;
 var hauteur_fenetre_Corrige = (0.20 * window.innerHeight);
 var hauteur_pannel = (0.95 * window.innerHeight);
-
 
 
 var indice = 0.01;
@@ -56,25 +51,32 @@ onglet[3].style.opacity = 1;
 onglet[3].style.borderTopColor = "rgb(0, 0, 0)";
 
 
-
 $(document).ready(function () {
     indice1.classList.add("active");
 
     setTimeout(function () {
-    setInterval(function () {
-        indice = indice + 0.02;
+        setInterval(function () {
+            indice = indice + 0.02;
 
-        divIntro.style.opacity = "" + (1 - indice);
-    }, 10);
+            imgPanel1Mob.style.width = "80vw";
+            imgPanel1Mob.style.opacity = "1";
+            imgPanel1Mob.style.marginLeft = "0";
+
+
+            imgPanel1.style.marginLeft = "0";
+            imgPanel1.style.opacity = "1";
+
+
+            divIntro.style.opacity = "" + (1 - indice);
+        }, 10);
 
     }, 200);
 
-        setTimeout(function () {
-            onglet[4].style.opacity = 1;
-            imgPanel1.style.marginLeft = "0";
-            imgPanel1.style.opacity = "1";
-            textP1.style.opacity = "1";
-        }, 400);
+    setTimeout(function () {
+        onglet[4].style.opacity = 1;
+
+        textP1.style.opacity = "1";
+    }, 400);
 
     setTimeout(function () {
         onglet[2].style.opacity = 1;
@@ -117,11 +119,22 @@ function update_menu() {
     }
 
 
- if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
+    if (scroll_Y > ((hauteur_fenetre - hauteur_fenetre_Corrige) + hauteur_pannel)) {
         indexPanel = 3;
 
         navbarSectionText.style.color = "black";
-        imgPanel3.style.marginLeft = "-10vw";
+
+
+        if (window.matchMedia("(min-width: 700px)").matches) {
+
+            imgPanel3.style.marginLeft = "-10vw";
+
+        } else {
+            imgPanel3.style.marginLeft = "-30vw";
+
+        }
+
+
         imgPanel3.style.opacity = "1";
         textP3.style.opacity = "1";
         imgPanel3.style.marginTop = "-2vh";
@@ -138,7 +151,7 @@ function update_menu() {
 
         navbarSectionText.style.color = "black";
 
-       imgPanel2.style.marginLeft = "0";
+        imgPanel2.style.marginLeft = "0";
         imgPanel2.style.opacity = "1";
         textP2.style.opacity = "1";
 
@@ -213,7 +226,7 @@ $("#leftSidebar ul li a").click(function (e) {
 // detect a mousewheel event (note: relies on jquery mousewheel plugin):
 
 
-indice1.onclick = function() {
+indice1.onclick = function () {
     window.scrollTo({top: 0, behavior: "smooth"});
     indice1.classList.add("active");
     indice2.classList.remove("active");
@@ -223,8 +236,8 @@ indice1.onclick = function() {
 
 
 }
-indice2.onclick = function() {
-    window.scrollTo({top: hauteur_pannel, behavior : "smooth"});
+indice2.onclick = function () {
+    window.scrollTo({top: hauteur_pannel, behavior: "smooth"});
     indice2.classList.add("active");
     indice1.classList.remove("active");
     indice3.classList.remove("active");
@@ -232,8 +245,8 @@ indice2.onclick = function() {
     indice5.classList.remove("active");
 
 }
-indice3.onclick = function() {
-    window.scrollTo({top: hauteur_pannel*2, behavior : "smooth"});
+indice3.onclick = function () {
+    window.scrollTo({top: hauteur_pannel * 2, behavior: "smooth"});
     indice3.classList.add("active");
     indice1.classList.remove("active");
     indice2.classList.remove("active");
@@ -241,7 +254,6 @@ indice3.onclick = function() {
     indice5.classList.remove("active");
 
 }
-
 
 
 window.addEventListener("mousewheel", swipe);
@@ -327,8 +339,6 @@ $("#sidePanelClose").click(function (e) {
     $("#mainStack").removeClass("shift");
 }); // end click
 //--- END SHOW/HIDE SIDE PANEL EVENTS ---//
-
-
 
 
 /*

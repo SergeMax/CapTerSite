@@ -214,6 +214,7 @@ function update_menu() {
 
         imgPanel2.style.marginLeft = "0";
         imgPanel2.style.opacity = "1";
+        imgPanel2.style.width = "70%";
         textP2.style.opacity = "1";
         for (var i = 0; i < onglet.length; i++) {
             onglet[i].classList.add("ongletSurFondBlanc");

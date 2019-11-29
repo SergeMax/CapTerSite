@@ -17,6 +17,8 @@ var divIntro = document.getElementById("divIntro");
 var textCapital = document.getElementById("textCapitalsTerre");
 var textTerres = document.getElementById("textTerres");
 var imgPanel1 = document.getElementById("imgPanel1");
+var imgPanel1Mob = document.getElementById("imgPanel1Mob");
+
 var textTerres = document.getElementById("textTerres");
 var textP1 = document.getElementById("textP1");
 var textP2 = document.getElementById("textP2");
@@ -65,15 +67,21 @@ $(document).ready(function () {
         indice = indice + 0.02;
 
         divIntro.style.opacity = "" + (1 - indice);
+        imgPanel1Mob.style.marginLeft = "-10vw";
+        imgPanel1Mob.style.opacity = "1";
+
     }, 10);
 
     }, 200);
 
-
-
         setTimeout(function () {
             onglet[4].style.opacity = 1;
-            imgPanel1.style.marginLeft = "20vw";
+
+
+                imgPanel1.style.marginLeft = "20vw";
+
+
+
             imgPanel1.style.opacity = "1";
             textP1.style.opacity = "1";
 
@@ -166,9 +174,25 @@ function update_menu() {
 
         navbarSectionText.style.color = "black";
         imgPanel3.style.marginLeft = "0vw";
+
+
         imgPanel3.style.opacity = "1";
         textP3.style.opacity = "1";
-        imgPanel3.style.marginTop = "-1vh";
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            imgPanel3.style.marginTop = "-1vh";
+            imgPanel3.style.width = "70%";
+
+
+
+        } else {
+            imgPanel3.style.width = "140%";
+
+            imgPanel3.style.marginTop = "30vh";
+
+            imgPanel3.style.marginLeft = "-15vh";
+
+        }
+
         indice4.classList.remove("active");
         indice3.classList.add("active");
         indice2.classList.remove("active");

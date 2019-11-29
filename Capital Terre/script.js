@@ -40,6 +40,12 @@ var trait1 = document.getElementById("trait1");
 var trait2 = document.getElementById("trait2");
 var indicator = document.getElementById("indicator");
 var textTitreMob = document.getElementById("textTitreMob");
+var indiceExtend1 = document.getElementById("indiceExtend1");
+var indiceExtend2 = document.getElementById("indiceExtend2");
+var indiceExtend3 = document.getElementById("indiceExtend3");
+var indiceExtend4 = document.getElementById("indiceExtend4");
+var indiceExtend5 = document.getElementById("indiceExtend5");
+
 
 
 
@@ -185,7 +191,7 @@ function update_menu() {
             imgPanel51.style.left = "8vw";
 
         } else {
-            imgPanel54.style.left = "35vw";
+            imgPanel54.style.left = "25vw";
             imgPanel51.style.left = "8vw";
         }
 
@@ -225,8 +231,8 @@ function update_menu() {
             imgPanel4.style.top = "0vh";
 
         } else {
-            imgPanel4.style.left = "-10vw";
-            imgPanel4.style.width = "100vw";
+            imgPanel4.style.left = "-12vw";
+            imgPanel4.style.width = "105vw";
         }
 
         indice5.classList.remove("active");
